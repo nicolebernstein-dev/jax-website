@@ -42,19 +42,22 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Confirmation emails ready for Pardot. Form build in progress; reCAPTCHA guidance provided.
+**Status:** on track — Form embedded with UTM tracking live; reCAPTCHA ready to enable; thank-you pages and test submission pending
 
 **Done this session**
-- Provided reCAPTCHA setup instructions for Pardot form
+- Added Pardot form to draft landing page in 'Reserve my seat' slot
+- Rewrote NYU header line for clarity and impact
+- Verified UTM tracking script copies query params to hidden form fields
+- Confirmed form has all 5 hidden UTM fields plus required fields and spam trap
 
 **Open items**
 - Reconnect Google Workspace to verify Salesforce Tower event address
-- Build Pardot form 'event-26-12-ny-world-tour-edu – Registration Form' with five hidden UTM fields and reCAPTCHA enabled
-- Provide iframe link for completed Pardot form
-- Test form submission twice with same address to verify status change at 30-registration threshold
+- Enable reCAPTCHA in Pardot form Advanced tab (form height already set to 620)
+- Test form submission with ?utm_source=test&utm_campaign=test; verify UTMs, status, email, thank-you page
+- Create /thank-you/ and /waitlist/ pages with wording (draft or provide copy)
+- Preview landing page on mobile and desktop; confirm header, photo spacing, button style, text readability
 - Send test emails from Pardot and preview rendering on desktop and mobile
 - Publish landing page to activate event link in confirmation emails
-- Preview landing page on mobile and desktop; confirm header, photo spacing, button style, text readability
 - Decide: remove 'first-hand' from blue section or keep it
 
 **Decisions**
@@ -72,13 +75,14 @@
 
 **Next**
 - Reconnect Google Workspace to confirm Salesforce Tower address
-- Copy both email HTMLs into Pardot email templates
-- Build Pardot form with five hidden UTM fields and enable reCAPTCHA in Advanced tab
-- Test form submission with reCAPTCHA and verify thank-you page routing
+- Enable reCAPTCHA in Pardot form Advanced tab
+- Test form submission with UTM params; verify prospect record, campaign status, confirmation email, thank-you page routing
+- Provide wording for /thank-you/ and /waitlist/ pages or request draft
+- Preview landing page on mobile and desktop
 - Send test emails from Pardot and preview on desktop and mobile
 - Publish landing page to activate event link in confirmation emails
 
-**Checked live on 2026-11-02:** the web
+**Checked live on 2026-11-02:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-02
 | | |
 |---|---|
@@ -88,24 +92,18 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-Keeping "Maintain the initial value" unticked to match your other forms is the right call.
+I've added your form to the draft landing page and rewritten the NYU line: [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065). The saved page includes both changes and is still a draft.
 
-## Turning on reCAPTCHA
+**New NYU line in the header:**
+> **Meet the NYU team in person and hear how they are putting AI to work.**
 
-1. Open the form in Account Engagement and click **Edit**.
-2. Go to the **Look and Feel** step of the form wizard.
-3. Open the **Advanced** tab.
-4. Tick the reCAPTCHA / bot protection option ("Enable explicit bot protection").
-5. Click through to **Confirm & Save**.
+"Meet… in person" makes it clear they'll be there, and "putting AI to work" says what attendees will get from it. If you'd like something punchier, two other options are:
+- "NYU will be in the room, sharing what it took to put AI to work."
+- "Hear from NYU, live and in person, on what's working with AI."
 
-## Things to know
-
-- **Pardot already has some protection without it.** Pardot shows a reCAPTCHA by itself when it detects an unusual burst of submissions. Turning it on makes every visitor see it.
-- **It works in the page embed.** reCAPTCHA works on Pardot-hosted forms, and the landing page loads your hosted form in an iframe, so it's covered. (Form handlers aren't covered, but we're not using one.)
-- **The form gets taller.** The checkbox adds height. When you send me the iframe link, tell me reCAPTCHA is on and I'll leave room in the embed so the submit button isn't cut off.
-- **Test it once.** It's worth checking that the reCAPTCHA still lets the submission through and that the right thank-you page still opens. You'd do that in the same test submission that checks the UTMs.
-
-I haven't seen your Pardo
+**The form**
+- **On the page:** it's in the "Reserve my seat" slot where the placeholder box used to be. I set the height to 620 instead of 500 so the submit button doesn't get cut off. That also leaves room for the reCAPTCHA checkbox, which isn't showing on the form yet. If you turn it on and the button still gets cut off, tell me and I'll make it taller.
+- **UTM tracking works:** a small script copies any `utm_source`, `utm_medium`, `utm_campaign`, `utm_term` and `utm_content` values from the page link into the form. I tested the form itself: when I added `?utm_source=…` 
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
