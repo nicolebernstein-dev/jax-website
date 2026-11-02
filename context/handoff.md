@@ -42,16 +42,16 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Video added with default thumbnail; preview & 0:59 frame capture needed before reCAPTCHA & testing
+**Status:** on track — Featured image file ready to upload; video stays on YouTube; preview & 0:59 frame capture still needed
 
 **Done this session**
-- Removed asterisk from 'Spaces are limited.'
-- Added video in light-grey section at bottom with lazy-load YouTube player
+- Created featured image file (1200×630) from Washington Square Arch photo
+- Confirmed video hosting strategy: keep YouTube (Revecast channel)
 
 **Open items**
 - Preview landing page on computer and phone; confirm title wrapping, form fit, button visibility, spacing, video load behavior
 - Capture 0:59 frame screenshot from video; upload to Media Library or provide for swap
-- Set featured image (0:59 frame or alternative) to control social share preview
+- Upload featured image file (nyc-event-featured-image-1200x630.jpg) to WordPress Media Library and set on page
 - Reconnect Google Workspace to verify Salesforce Tower event address
 - Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height if needed
 - Test form submission with ?utm_source=test&utm_campaign=test; verify UTMs, prospect record, confirmation email, thank-you page routing
@@ -72,9 +72,9 @@
 - Google Workspace connection expired — cannot verify event address in Google Doc
 
 **Next**
+- Upload featured image file to WordPress Media Library and set on page (1 min)
 - Preview draft landing page on computer and phone; report title wrapping, form fit, button visibility, spacing, video load behavior
 - Capture 0:59 frame screenshot and upload to Media Library or provide link
-- Set featured image to control social share preview
 - Reconnect Google Workspace to confirm Salesforce Tower address
 - Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height if needed
 
@@ -88,19 +88,21 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-I removed the asterisk and added the video, but the thumbnail isn't the 0:59 frame yet. The draft page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065), saved with both changes and is still a draft.
+I couldn't set the featured image myself, so I made a version sized for it that you can upload. My WordPress tools here can't upload to the Media Library or set a page's featured image. I checked the page: it still has no featured image. The header photo isn't in your Media Library either. The page loads it straight from Wikimedia Commons, so there's nothing in WordPress to pick yet.
 
-- **"Spaces are limited.":** the asterisk is gone.
-- **Video:** it's in a new light-grey section at the very bottom, below the "Reserve my seat" button. It's the full width of the text above it, with an orange play button in the middle. The YouTube player only loads when someone clicks, and the video then starts from the beginning.
+## Featured image
 
-**Why the thumbnail isn't the 0:59 frame:** YouTube doesn't let you pick a thumbnail by timestamp. To use that frame, I'd have to download the video and take the still from it, and YouTube blocked the download from here ("Sign in to confirm you're not a bot"). So for now the page uses the video's default YouTube thumbnail.
+**nyc-event-featured-image-1200x630.jpg** is attached to this session. It's the same Washington Square Arch photo as the header, cropped to 1200×630, the standard size for link previews on LinkedIn, Slack and email.
 
-**To get the 0:59 frame:**
-1. Pause the video at 0:59 and take a screenshot, cropped to just the video.
-2. Upload it to the WordPress Media Library and send me its link. Or attach it here, and you can upload it once I've cropped and sized it.
-3. I'll swap it in. That's a one-line change.
+To set it (about a minute):
+1. Open the page in WordPress and find **Featured image** in the right sidebar (Page tab).
+2. Click **Set featured image**, then **Upload files**, and choose the attached image.
+3. Fill in the image details:
+   - **Alt text:** Washington Square Arch, New York City
+   - **Caption:** Photo: BruceSchaff, CC BY-SA 4.0 (the photo's license requires credit)
+4. Click **Set featured image**, then **Save draft**.
 
-**Something else to know:** t
+Once it's set, Yoast will use it for link previews instead of the YouTube thumbnail it uses now. Tell me when it's done and I'll check the 
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
