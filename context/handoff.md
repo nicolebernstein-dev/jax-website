@@ -42,21 +42,20 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Hero & form repositioned; preview on computer & phone needed before reCAPTCHA & testing
+**Status:** on track — Video added with default thumbnail; preview & 0:59 frame capture needed before reCAPTCHA & testing
 
 **Done this session**
-- Moved 'Spaces are limited' note before 'Hosted by' line with blank line separator
-- Adjusted text alignment next to form on desktop (one line lower)
-- Verified changes saved in WordPress draft
+- Removed asterisk from 'Spaces are limited.'
+- Added video in light-grey section at bottom with lazy-load YouTube player
 
 **Open items**
-- Preview landing page on computer and phone; confirm title wrapping, form fit, button visibility, spacing
+- Preview landing page on computer and phone; confirm title wrapping, form fit, button visibility, spacing, video load behavior
+- Capture 0:59 frame screenshot from video; upload to Media Library or provide for swap
+- Set featured image (0:59 frame or alternative) to control social share preview
 - Reconnect Google Workspace to verify Salesforce Tower event address
 - Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height if needed
 - Test form submission with ?utm_source=test&utm_campaign=test; verify UTMs, prospect record, confirmation email, thank-you page routing
 - Create /thank-you/ and /waitlist/ pages with wording (draft or provide copy)
-- Send test emails from Pardot; preview rendering on desktop and mobile
-- Publish landing page to activate event link in confirmation emails
 - Decide: remove 'first-hand' from blue section or keep it
 
 **Decisions**
@@ -73,10 +72,11 @@
 - Google Workspace connection expired — cannot verify event address in Google Doc
 
 **Next**
-- Preview draft landing page on computer and phone; report title wrapping, form fit, button visibility, spacing issues
+- Preview draft landing page on computer and phone; report title wrapping, form fit, button visibility, spacing, video load behavior
+- Capture 0:59 frame screenshot and upload to Media Library or provide link
+- Set featured image to control social share preview
 - Reconnect Google Workspace to confirm Salesforce Tower address
 - Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height if needed
-- Test form submission with UTM params; verify prospect record, campaign status, confirmation email, thank-you page routing
 
 **Checked live on 2026-11-02:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-02
@@ -88,12 +88,19 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-I've made both changes to the draft landing page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065). The version WordPress saved has both changes, and the page is still a draft.
+I removed the asterisk and added the video, but the thumbnail isn't the 0:59 frame yet. The draft page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065), saved with both changes and is still a draft.
 
-- **Text next to the form:** it now starts one line lower, so the NYU line sits about one line below the top of the form. This only applies on computers. On phones the text sits above the form, so there's nothing to line up with and the spacing is the same as before.
-- **Last two lines swapped:** "*Spaces are limited." now comes first, then "Hosted by Jax Consulting in partnership with Salesforce." with a blank line between them.
+- **"Spaces are limited.":** the asterisk is gone.
+- **Video:** it's in a new light-grey section at the very bottom, below the "Reserve my seat" button. It's the full width of the text above it, with an orange play button in the middle. The YouTube player only loads when someone clicks, and the video then starts from the beginning.
 
-**Please check the preview on a computer.** I can't see the page as it displays from here. If the text should come down more or less than that, tell me and I'll adjust it.
+**Why the thumbnail isn't the 0:59 frame:** YouTube doesn't let you pick a thumbnail by timestamp. To use that frame, I'd have to download the video and take the still from it, and YouTube blocked the download from here ("Sign in to confirm you're not a bot"). So for now the page uses the video's default YouTube thumbnail.
 
-Sources: checked live: the draft page (read before saving, and the version WordPress saved) · not checked: how the page looks in a browser
+**To get the 0:59 frame:**
+1. Pause the video at 0:59 and take a screenshot, cropped to just the video.
+2. Upload it to the WordPress Media Library and send me its link. Or attach it here, and you can upload it once I've cropped and sized it.
+3. I'll swap it in. That's a one-line change.
+
+**Something else to know:** t
+
+_[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
