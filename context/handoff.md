@@ -42,18 +42,21 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Thank-you pages published and live. Landing page draft ready for form testing after search engine blocking.
+**Status:** at risk — Form submission fails after Pardot acceptance; thank-you redirect broken. Need Pardot form audit.
 
 **Done this session**
-- Published /nyc-education-ai-2026-registered/ thank-you page
-- Published /nyc-education-ai-2026-waitlist/ thank-you page
-- Verified both pages load for visitors
+- Identified form submission error occurs in Pardot completion actions, not landing page
+- Confirmed Pardot prospect created (ID 98056183) but thank-you redirect fails
+- Confirmed Salesforce campaign has 0 members — lead sync not working
 
 **Open items**
 - Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-registered/
 - Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-waitlist/
-- Test form submission on draft landing page preview with ?utm_source=test&utm_campaign=test; verify registered thank-you page opens in full window
-- Preview both thank-you pages on computer and phone; report any changes needed
+- Check test prospect activities: form success listed? confirmation email arrived?
+- If form success + no email: verify autoresponder template ticked 'Available for Use' and completion action points to it
+- If form success + email arrived: test thank-you code by removing from Thank You Code tab, resubmit, check if error clears
+- Add 'Assign prospect to user/queue' completion action before 'Add to Salesforce Campaign' in Pardot form
+- Preview both thank-you pages on computer and phone; report desired changes
 - At 30 registrations, change 'registered' to 'waitlist' in Pardot Thank You Code Step 6
 
 **Decisions**
@@ -67,12 +70,15 @@
 - Pardot Thank You Code sends signal only; landing page listener handles redirect (origin-locked to go.jaxconsult.com)
 
 **Blockers**
+- Pardot form completion actions failing — thank-you redirect not executing after prospect creation
+- Salesforce lead sync broken — campaign has 0 members despite form submissions
 - Google Workspace connection expired — cannot verify event address in Google Doc
 
 **Next**
-- Set Yoast 'Allow search engines' to No on both published thank-you pages
-- Test form submission on draft landing page preview with ?utm_source=test&utm_campaign=test; confirm registered thank-you page opens in full window
-- Preview both thank-you pages on computer and phone; report desired changes
+- Open test prospect 98056183 in Pardot; check Activities for 'Form success' and whether confirmation email arrived
+- Based on step 1 result, follow Pardot form audit path: check autoresponder template, thank-you code syntax, or layout template
+- Add 'Assign prospect to user/queue' completion action to Pardot form before 'Add to Salesforce Campaign'
+- Retest form submission after fixes; verify thank-you page opens in full window and prospect syncs to Salesforce
 
 **Checked live on 2026-11-02:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-02
@@ -84,19 +90,15 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-I published both thank-you pages, and both load for visitors.
+The good news is that your registration got through. Pardot created the prospect, so the form accepted the details. The error comes after that, when Pardot runs the form's final steps: the completion actions and the thank-you message. The page I added can't cause it, because it only acts once Pardot has finished and sent its signal. So the problem is in the Pardot form setup.
 
-- [You're Registered: From Roadmap to Reality](https://www.jaxconsult.com/nyc-education-ai-2026-registered/)
-- [You're on the Waitlist: From Roadmap to Reality](https://www.jaxconsult.com/nyc-education-ai-2026-waitlist/)
+I can't open the form in Pardot from here. When I tried to read the prospect through the Pardot API, it returned "Access Denied". So these steps will help you find which part is failing.
 
-The landing page itself is still a draft.
+**1. Check what Pardot finished.** Open the test prospect and look at its **Activities**:
+- **Form success** listed, and no confirmation email in your inbox: the autoresponder step is the likely problem. Open the email template and check that **Autoresponder Emails** is ticked under "Available for Use". Then check that the completion action points to that template and not an old draft.
+- **Form success** listed, and the email did arrive: the problem is in the thank-you part. Go to step 2.
 
-**Do this next: hide them from Google.** Search engines are still allowed to show both pages. On each page, open the Yoast panel, go to **Advanced**, and set "Allow search engines to show this page in search results?" to **No**. Then click **Update**. I can't change that setting from here.
+**2. Test the thank-you part.** Edit the form and cut the script out of the **Thank You Code** tab (keep a copy). Save, then submit again
 
-**Then test the form:**
-1. Open the draft landing page preview and add `?utm_source=test&utm_campaign=test` to the end of the address.
-2. Submit the form.
-3. The registered thank-you page should open in the full browser window, not inside the form box. If it doesn't, tell me what you see.
-
-Sources: checked live: both pages as WordPress saved them (status "publish"), and both web addresses (each loaded normally) · not checked: a real form submission in a browser
+_[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
