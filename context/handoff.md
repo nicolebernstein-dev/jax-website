@@ -42,12 +42,11 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Pardot forms guide complete; awaiting iframe links, UTM Field IDs, and email copy to proceed
+**Status:** on track — Landing page header photo added; awaiting forms, UTM IDs, and email copy to proceed
 
 **Done this session**
-- Created D01 – Pardot Registration Forms Guide covering both forms, UTM capture, confirmation emails, thank-you pages, and go-live checklist
-- Verified UTM Lead fields exist and 381 leads have UTM data
-- Identified UTM script requirement for iframe form and thank-you page redirect
+- Added Washington Square Arch photo to landing page header with brand gradient overlay
+- Verified photo license (CC0) and link functionality
 
 **Open items**
 - Build Pardot Form A (Registered action) with five hidden UTM fields
@@ -56,26 +55,28 @@
 - Provide iframe links for Form A and Form B
 - Provide five UTM Field IDs from Pardot prospect field settings
 - Provide confirmation email text and thank-you page wording
-- Add UTM script and forms to WordPress page and create thank-you page drafts
-- Consider adding five UTM fields to Contact object (optional)
+- Upload Washington Square Arch photo to WordPress Media Library and send new link
+- Add UTM script and forms to WordPress page; create thank-you page drafts
 
 **Decisions**
 - Campaign type: Seminar/Conference
 - Campaign status: Planned and Active
 - Event date: December 2, 2026
 - Member statuses: Registered (default), Waitlisted, Attended, No Show
-- Use Registered count for seat availability, not Responded total
+- Use Registered count for seat availability
 - UTM capture via script on landing page (iframe limitation)
 - Thank-you pages at /nyc-education-ai-2026/thank-you/ and /nyc-education-ai-2026/waitlist/
+- Header photo sourced from Wikimedia Commons (CC0)
 
 **Blockers**
 - None
 
 **Next**
+- Upload Washington Square Arch photo to Media Library; send new link to switch header
+- Test landing page header on mobile before publishing
 - Build Pardot Form A and Form B with UTM hidden fields and campaign member actions
 - Create two confirmation email templates for autoresponder use
 - Send iframe links, UTM Field IDs, and email/thank-you wording
-- Add UTM script and forms to WordPress page; create thank-you page drafts
 - Test forms and UTM capture before publishing
 
 **Checked live on 2026-11-02:** nothing — the status above is as recorded, not re-checked
@@ -88,14 +89,17 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-I've attached a step-by-step guide to this session: **D01 – Pardot Registration Forms Guide**. It covers building both forms, with UTM capture, the confirmation emails and the thank-you pages. In short:
+The draft landing page header now uses Marco Almbauer's photo of the Washington Square Arch. You can preview it at [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065). The page is still a draft and hasn't been published.
 
-1. **UTM fields:** check (or create) five hidden prospect fields and map them to your Salesforce Lead fields `UTM_Source__c` through `UTM_Term__c`. Those Lead fields already exist, and 381 leads have UTM data in them.
-2. **Confirmation emails:** create two email templates marked as available for autoresponders, one saying "You're registered" and one saying "You're on the waitlist". There are prompts for where your content goes.
-3. **Form A:** First name, Last name, Email, Company and Title, plus the five hidden UTM fields. On submit it adds the person to the campaign as **Registered** and sends the registration email.
-4. **Form B:** a copy of Form A that sets **Waitlisted** and sends the waitlist email.
-5. **Thank-you pages:** `/nyc-education-ai-2026/thank-you/` and `/nyc-education-ai-2026/waitlist/`.
-6. **Before you go live:** a test checklist, how to switch to Form B at 30 seats (including changing Form A to waitlist so nobody can still register through it) and how to move people
+**What changed**
+- **Header background:** the arch photo now sits behind the hero. Your blue brand gradient is laid over it, partly see-through, so the white title, event details and form box stay easy to read. The photo is sized to fill the header on any screen.
+- **Nothing else:** all the text, the form slot and the decorative pattern are the same as before.
+- **Checked:** I read the page back after saving. It's still a draft and the new header is in place. I also opened the photo link to make sure it works.
+
+**Credit and license:** the photo is CC0 (public domain), so no credit line is needed on the page. I left a hidden note in the page code that records the photographer and source.
+
+**Before you publish:** the photo loads from Wikimedia Commons, because I can't add files to your WordPress Media Library from here. That works fine, but your site will be more reliable if the photo lives in your own Media Library:
+1. Upload "Washington Square Arch
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
