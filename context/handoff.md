@@ -42,16 +42,15 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Featured image file ready to upload; video stays on YouTube; preview & 0:59 frame capture still needed
+**Status:** on track — Featured & video thumbnails ready to upload; preview & reCAPTCHA setup next
 
 **Done this session**
-- Created featured image file (1200×630) from Washington Square Arch photo
-- Confirmed video hosting strategy: keep YouTube (Revecast channel)
+- Created video thumbnail (1280×720) from 0:59 screenshot with 16:9 fit
 
 **Open items**
+- Upload featured image (nyc-event-featured-image-1200x630.jpg) to WordPress Media Library and set on page
+- Upload video thumbnail (nyc-event-video-thumbnail-1280x720.jpg) to Media Library; send File URL and confirm play button position (centered or lower)
 - Preview landing page on computer and phone; confirm title wrapping, form fit, button visibility, spacing, video load behavior
-- Capture 0:59 frame screenshot from video; upload to Media Library or provide for swap
-- Upload featured image file (nyc-event-featured-image-1200x630.jpg) to WordPress Media Library and set on page
 - Reconnect Google Workspace to verify Salesforce Tower event address
 - Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height if needed
 - Test form submission with ?utm_source=test&utm_campaign=test; verify UTMs, prospect record, confirmation email, thank-you page routing
@@ -72,9 +71,9 @@
 - Google Workspace connection expired — cannot verify event address in Google Doc
 
 **Next**
-- Upload featured image file to WordPress Media Library and set on page (1 min)
+- Upload featured image to WordPress Media Library and set on page (1 min)
+- Upload video thumbnail to Media Library; send File URL and specify play button position
 - Preview draft landing page on computer and phone; report title wrapping, form fit, button visibility, spacing, video load behavior
-- Capture 0:59 frame screenshot and upload to Media Library or provide link
 - Reconnect Google Workspace to confirm Salesforce Tower address
 - Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height if needed
 
@@ -88,21 +87,21 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-I couldn't set the featured image myself, so I made a version sized for it that you can upload. My WordPress tools here can't upload to the Media Library or set a page's featured image. I checked the page: it still has no featured image. The header photo isn't in your Media Library either. The page loads it straight from Wikimedia Commons, so there's nothing in WordPress to pick yet.
+I've attached two images to this session, both ready to upload to the WordPress Media Library:
 
-## Featured image
+- **nyc-event-featured-image-1200x630.jpg** is the featured image. It's the Washington Square Arch photo from the header, sized for link previews on LinkedIn, Slack and email.
+  - Alt text: Washington Square Arch, New York City
+  - Caption: Photo: BruceSchaff, CC BY-SA 4.0 (the photo's license requires this credit)
+- **nyc-event-video-thumbnail-1280x720.jpg** is the video thumbnail, made from your 0:59 screenshot. I trimmed 4px off each side so it fits the 16:9 player exactly and enlarged it to 1280×720.
+  - Alt text: Jax Consulting video: Build a production deployed Agentforce agent
 
-**nyc-event-featured-image-1200x630.jpg** is attached to this session. It's the same Washington Square Arch photo as the header, cropped to 1200×630, the standard size for link previews on LinkedIn, Slack and email.
+**What to do next**
+1. In the page editor, set the first image as the **Featured image** (right sidebar, Page tab).
+2. Upload the thumbnail to the Media Library and send me its **File URL**. You'll find it in the image's details panel. I'll put it on the video.
 
-To set it (about a minute):
-1. Open the page in WordPress and find **Featured image** in the right sidebar (Page tab).
-2. Click **Set featured image**, then **Upload files**, and choose the attached image.
-3. Fill in the image details:
-   - **Alt text:** Washington Square Arch, New York City
-   - **Caption:** Photo: BruceSchaff, CC BY-SA 4.0 (the photo's license requires credit)
-4. Click **Set featured image**, then **Save draft**.
+I can't upload to the Media Library from here, so this has to be done on your end.
 
-Once it's set, Yoast will use it for link previews instead of the YouTube thumbnail it uses now. Tell me when it's done and I'll check the 
+**About the play button:** the orange play button sits in the middle of the video, and on this frame that's right over the "Build a production deployed Agentforce ag
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
