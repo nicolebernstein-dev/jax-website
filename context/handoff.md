@@ -42,19 +42,19 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Featured & video thumbnails ready to upload; preview & reCAPTCHA setup next
+**Status:** on track — Video thumbnail live & working; featured image needs save; preview & reCAPTCHA next
 
 **Done this session**
-- Created video thumbnail (1280×720) from 0:59 screenshot with 16:9 fit
+- Video thumbnail uploaded and linked; play button positioned below text, loads correctly at 944×526
 
 **Open items**
-- Upload featured image (nyc-event-featured-image-1200x630.jpg) to WordPress Media Library and set on page
-- Upload video thumbnail (nyc-event-video-thumbnail-1280x720.jpg) to Media Library; send File URL and confirm play button position (centered or lower)
-- Preview landing page on computer and phone; confirm title wrapping, form fit, button visibility, spacing, video load behavior
-- Reconnect Google Workspace to verify Salesforce Tower event address
+- Reload page editor, set featured image, save draft to persist it (WordPress showing none currently)
+- Preview landing page on computer and phone; confirm title wrapping, form fit, button visibility, spacing, video play behavior
+- Upload featured image (nyc-event-featured-image-1200x630.jpg) to Media Library if not already done
 - Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height if needed
 - Test form submission with ?utm_source=test&utm_campaign=test; verify UTMs, prospect record, confirmation email, thank-you page routing
 - Create /thank-you/ and /waitlist/ pages with wording (draft or provide copy)
+- Reconnect Google Workspace to verify Salesforce Tower event address
 - Decide: remove 'first-hand' from blue section or keep it
 
 **Decisions**
@@ -71,11 +71,9 @@
 - Google Workspace connection expired — cannot verify event address in Google Doc
 
 **Next**
-- Upload featured image to WordPress Media Library and set on page (1 min)
-- Upload video thumbnail to Media Library; send File URL and specify play button position
-- Preview draft landing page on computer and phone; report title wrapping, form fit, button visibility, spacing, video load behavior
-- Reconnect Google Workspace to confirm Salesforce Tower address
-- Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height if needed
+- Reload page editor, set featured image again, click Save draft, confirm save completed
+- Preview draft page on computer and phone; test video play; report title wrapping, form fit, button visibility, spacing
+- Enable reCAPTCHA in Pardot form Advanced tab and adjust form box height if needed
 
 **Checked live on 2026-11-02:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-02
@@ -87,21 +85,17 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-I've attached two images to this session, both ready to upload to the WordPress Media Library:
+The video now uses your 0:59 thumbnail, but the featured image isn't showing as set yet. The draft page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065), saved and is still a draft.
 
-- **nyc-event-featured-image-1200x630.jpg** is the featured image. It's the Washington Square Arch photo from the header, sized for link previews on LinkedIn, Slack and email.
-  - Alt text: Washington Square Arch, New York City
-  - Caption: Photo: BruceSchaff, CC BY-SA 4.0 (the photo's license requires this credit)
-- **nyc-event-video-thumbnail-1280x720.jpg** is the video thumbnail, made from your 0:59 screenshot. I trimmed 4px off each side so it fits the 16:9 player exactly and enlarged it to 1280×720.
-  - Alt text: Jax Consulting video: Build a production deployed Agentforce agent
+**Video thumbnail:** done.
+- The video box now uses your Video-thumbnail.png. I checked the link and the image loads.
+- The orange play button sits about three-quarters of the way down, below the "Build a production deployed Agentforce agent" box, so it doesn't cover the text. On phones it's a bit smaller.
+- WordPress was adding line breaks inside the video box, which could have pushed the image down and left a black strip at the top. I put that code on one line and hid any stray line breaks.
+- Your image is 944×526, which is slightly wider than the player's 16:9 shape. About 4px gets trimmed off each side, which you won't notice.
 
-**What to do next**
-1. In the page editor, set the first image as the **Featured image** (right sidebar, Page tab).
-2. Upload the thumbnail to the Media Library and send me its **File URL**. You'll find it in the image's details panel. I'll put it on the video.
+**Featured image:** WordPress still shows no featured image saved on this page. Because of that, Yoast is now using the video thumbnail as the link preview image on LinkedIn, Slack and email, not the Washington Square Arch photo. Usually this means the image was chosen in the editor but the page wasn't saved afterwards.
 
-I can't upload to the Media Library from here, so this has to be done on your end.
-
-**About the play button:** the orange play button sits in the middle of the video, and on this frame that's right over the "Build a production deployed Agentforce ag
+**Before you save in the editor, r
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
