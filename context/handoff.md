@@ -42,12 +42,11 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Form repositioned & hero shortened; preview on computer & phone needed before reCAPTCHA, testing, thank-you pages
+**Status:** on track — Hero & form repositioned; preview on computer & phone needed before reCAPTCHA & testing
 
 **Done this session**
-- Moved 'Spaces are limited' note under 'Hosted by' line with blank line separator
-- Reduced hero height: 40px below (was 100px), 80px above (was 100px) on desktop
-- Overrode theme padding on mobile/tablet: 56px above, 36px below hero
+- Moved 'Spaces are limited' note before 'Hosted by' line with blank line separator
+- Adjusted text alignment next to form on desktop (one line lower)
 - Verified changes saved in WordPress draft
 
 **Open items**
@@ -89,14 +88,12 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-I've moved the note and shortened the hero on the draft landing page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065). I checked the version WordPress saved: both changes are in it, and the page is still a draft.
+I've made both changes to the draft landing page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065). The version WordPress saved has both changes, and the page is still a draft.
 
-- **"*Spaces are limited.":** it now sits under "Hosted by Jax Consulting in partnership with Salesforce.", with a blank line between them. It's no longer under the form.
-- **Hero height:** on computers, the space below the hero content is now 40px instead of 100px, and the space above it is 80px instead of 100px. On tablets and phones, the site's theme was forcing 83px above and below and ignoring the page's own setting. I overrode that on this page only, so it's now 56px above and 36px below. The photo credit still sits in the bottom-right corner.
+- **Text next to the form:** it now starts one line lower, so the NYU line sits about one line below the top of the form. This only applies on computers. On phones the text sits above the form, so there's nothing to line up with and the spacing is the same as before.
+- **Last two lines swapped:** "*Spaces are limited." now comes first, then "Hosted by Jax Consulting in partnership with Salesforce." with a blank line between them.
 
-**Please check the preview on a computer and a phone.** I can't see the page as it displays from here. On computers, the form is now the tallest thing in the hero, so most of what's left at the bottom is the form box itself. If there's still too much space, tell me and I'll trim the form box too. I'd do that in small steps so the submit button doesn't get cut off.
+**Please check the preview on a computer.** I can't see the page as it displays from here. If the text should come down more or less than that, tell me and I'll adjust it.
 
-Sources: checked live: the draft page (re
-
-_[summary truncated — see the session record for the full text]_
+Sources: checked live: the draft page (read before saving, and the version WordPress saved) · not checked: how the page looks in a browser
 <!-- orchestrate:session-state:end -->
