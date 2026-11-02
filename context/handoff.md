@@ -42,17 +42,18 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Form redirect logic built and saved to draft landing page. Ready to publish thank-you pages and test end-to-end.
+**Status:** on track — Thank-you pages published and live. Landing page draft ready for form testing after search engine blocking.
 
 **Done this session**
-- Added missing signal listener to draft landing page to catch Pardot 'registered'/'waitlist' signal and redirect to thank-you pages
-- Verified page saved with featured image still set
+- Published /nyc-education-ai-2026-registered/ thank-you page
+- Published /nyc-education-ai-2026-waitlist/ thank-you page
+- Verified both pages load for visitors
 
 **Open items**
-- Publish both thank-you pages (/nyc-education-ai-2026-registered/ and /nyc-education-ai-2026-waitlist/)
+- Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-registered/
+- Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-waitlist/
 - Test form submission on draft landing page preview with ?utm_source=test&utm_campaign=test; verify registered thank-you page opens in full window
 - Preview both thank-you pages on computer and phone; report any changes needed
-- Set Yoast 'Allow search engines' to No on both thank-you pages
 - At 30 registrations, change 'registered' to 'waitlist' in Pardot Thank You Code Step 6
 
 **Decisions**
@@ -69,10 +70,9 @@
 - Google Workspace connection expired — cannot verify event address in Google Doc
 
 **Next**
-- Publish both thank-you pages
+- Set Yoast 'Allow search engines' to No on both published thank-you pages
 - Test form submission on draft landing page preview with ?utm_source=test&utm_campaign=test; confirm registered thank-you page opens in full window
 - Preview both thank-you pages on computer and phone; report desired changes
-- Set Yoast 'Allow search engines' to No on both published pages
 
 **Checked live on 2026-11-02:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-02
@@ -84,18 +84,19 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-Leave the Pardot code as it is. You don't need to change anything there.
+I published both thank-you pages, and both load for visitors.
 
-That code only sends a "form submitted" signal to the landing page. The page didn't have anything to catch that signal yet, so after submitting, people would have stayed on the form's thank-you message. I've now added the missing piece to the draft landing page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065). The page saved, it's still a draft, and the featured image is still set.
+- [You're Registered: From Roadmap to Reality](https://www.jaxconsult.com/nyc-education-ai-2026-registered/)
+- [You're on the Waitlist: From Roadmap to Reality](https://www.jaxconsult.com/nyc-education-ai-2026-waitlist/)
 
-**What happens now when someone submits the form:**
-- Pardot sends the signal `registered`, and the whole browser window opens `/nyc-education-ai-2026-registered/`.
-- At 30 registrations, change the word `registered` to `waitlist` in the Pardot Thank You Code. People will then go to `/nyc-education-ai-2026-waitlist/` instead.
-- The page only accepts this signal from your Pardot site (go.jaxconsult.com), so other sites can't trigger the redirect.
+The landing page itself is still a draft.
 
-**Before you test:**
-1. **Publish both thank-you pages.** Right now they're drafts, so visitors would see "page not found".
-2. **Test on the preview link.** Open the draft landing page preview with `?utm_source=test&utm_campaign=test` added to the end, then submit the 
+**Do this next: hide them from Google.** Search engines are still allowed to show both pages. On each page, open the Yoast panel, go to **Advanced**, and set "Allow search engines to show this page in search results?" to **No**. Then click **Update**. I can't change that setting from here.
 
-_[summary truncated — see the session record for the full text]_
+**Then test the form:**
+1. Open the draft landing page preview and add `?utm_source=test&utm_campaign=test` to the end of the address.
+2. Submit the form.
+3. The registered thank-you page should open in the full browser window, not inside the form box. If it doesn't, tell me what you see.
+
+Sources: checked live: both pages as WordPress saved them (status "publish"), and both web addresses (each loaded normally) · not checked: a real form submission in a browser
 <!-- orchestrate:session-state:end -->
