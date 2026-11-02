@@ -42,21 +42,21 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** at risk — Form redirect fixed with postMessage + fallback; awaiting test results. Salesforce sync still broken (0 members).
+**Status:** at risk — Form redirect working; Salesforce sync blocked — needs 'Assign prospect to user' action in Pardot before campaign sync can work.
 
 **Done this session**
-- Identified browser blocking as cause of thank-you redirect failure
-- Provided corrected Thank You Code with postMessage signal + window.top.location fallback
-- Confirmed Salesforce campaign still has 0 members — lead sync not working
+- Confirmed Salesforce campaign has 0 members and no leads created today
+- Identified root cause: prospects must be assigned to user/queue before Salesforce sync occurs
+- Provided fix: add 'Assign prospect to user' completion action above 'Add to Salesforce Campaign' in Pardot
 
 **Open items**
 - Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-registered/
 - Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-waitlist/
-- Test form submission with nicole.bernstein+nyctest2@jaxconsult.com; report: error shown, thank-you page opened full window, email arrived
 - Add 'Assign prospect to user/queue' completion action before 'Add to Salesforce Campaign' in Pardot form
+- Assign existing test prospects to a user in Pardot to trigger sync
+- Submit new test form with fresh +test address after fix is applied
 - At 30 registrations, change both 'registered' to 'waitlist' in Pardot Thank You Code
 - Preview both thank-you pages on computer and phone; report desired changes
-- After test passes, verify prospect syncs to Salesforce campaign
 
 **Decisions**
 - Thank You Code uses postMessage signal + try/catch window.top.location redirect to handle browser blocking
@@ -65,15 +65,17 @@
 - Single Pardot form handles both Registered and Waitlisted actions
 - Form name: 'event-26-12-ny-world-tour-edu – Registration Form'
 - Confirmation emails use Jax layout, Montserrat/Nunito fonts, blue #0c83df links
+- Prospect assignment to user/queue is required before Salesforce sync
 
 **Blockers**
-- Salesforce lead sync broken — campaign has 0 members despite form submissions; needs 'Assign prospect to user/queue' completion action in Pardot
+- Pardot form missing 'Assign prospect to user/queue' completion action — prevents lead creation in Salesforce
 
 **Next**
-- Test form with nicole.bernstein+nyctest2@jaxconsult.com using new Thank You Code
-- Report: error shown, thank-you page opened full window, confirmation email arrived
-- Add 'Assign prospect to user/queue' completion action to Pardot form before 'Add to Salesforce Campaign'
-- Retest form submission; verify prospect syncs to Salesforce campaign and thank-you page opens
+- Add 'Assign prospect to user/queue' completion action to Pardot form (place before 'Add to Salesforce Campaign')
+- Assign existing test prospects to a user in Pardot to trigger retroactive sync
+- Submit new test form with fresh +test email address
+- Verify lead and campaign member appear in Salesforce within 10–15 minutes
+- Report results and proceed with Yoast SEO settings and thank-you page preview
 
 **Checked live on 2026-11-02:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-02
@@ -85,17 +87,22 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-Testing again is fine. Two things to know first:
+Glad the form and redirect are working now.
 
-**1. Some browsers may block that code.** A form shown inside another page is often not allowed to send the whole browser window to a new page. Chrome and Safari can block this, and then the thank-you page either opens inside the form box or doesn't open at all. The landing page still has the listener I added earlier, so the safest option is to send the signal and also try the redirect. Paste this into the Thank You Code:
+On timing: once a prospect is set up to sync, the new lead and campaign member usually show up in Salesforce within a few minutes, and almost always within 10–15. If nothing has appeared after that, more waiting won't help. Something in the setup is stopping it.
 
-```
-<script>window.parent.postMessage({ jaxEventForm: 'registered' }, 'https://www.jaxconsult.com'); try { window.top.location.href = "https://www.jaxconsult.com/nyc-education-ai-2026-registered/"; } catch (e) {}</script>
-```
+That's what's happening here. I checked Salesforce just now:
+- The campaign **event-26-12-ny-world-tour-edu** has **0 members**.
+- **No leads** were created today, and there's no lead for any of your +test addresses.
+- The only matching contact is your own record, and it was last changed on October 12.
 
-Whichever part works first, the person lands on the same page. At 30 registrations, change **both** `registered` words to `waitlist`.
+So the problem isn't that the campaign member is missing. The person never reached Salesforce at all, and a campaign member can't exist until there's a lead or contact to attach it to.
 
-**2. The registration still hasn't reached Salesforce.** I just checked: the campaign has 0 members, and no lead was created today. The notification you got was most likely Pardot's own "form submitted" email, not a sign that the record synced. Until the form assigns the prospect to a user or queue (put that completion action before "Add to Salesforce Campaig
+**The likely cause:** Pardot only creates a Salesforce lead once a prospect is **assigned to a user or queue**. Unassigned prospects stay in Pardot only, so "Add to Salesforce Campaign" has no record to add.
+
+**How to fix it:**
+1. Open the form's **Completion Actions** in Pardot.
+2. Add **Assign prospect to user** (or to a queue or active assignment rule, whichever your other Jax forms use), and p
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
