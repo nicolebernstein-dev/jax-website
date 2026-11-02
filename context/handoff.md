@@ -42,16 +42,14 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Confirmation emails completed and ready to paste into Pardot. Landing page, form build, and address verification next.
+**Status:** on track — Confirmation emails ready for Pardot. Form build in progress; reCAPTCHA guidance provided.
 
 **Done this session**
-- Finalized D02 – Confirmation Email (Registered) HTML with &ndash; dash fix
-- Finalized D03 – Confirmation Email (Waitlisted) HTML with &ndash; dash fix
-- Provided copy-ready HTML blocks for both emails
+- Provided reCAPTCHA setup instructions for Pardot form
 
 **Open items**
 - Reconnect Google Workspace to verify Salesforce Tower event address
-- Build Pardot form 'event-26-12-ny-world-tour-edu – Registration Form' with five hidden UTM fields
+- Build Pardot form 'event-26-12-ny-world-tour-edu – Registration Form' with five hidden UTM fields and reCAPTCHA enabled
 - Provide iframe link for completed Pardot form
 - Test form submission twice with same address to verify status change at 30-registration threshold
 - Send test emails from Pardot and preview rendering on desktop and mobile
@@ -73,13 +71,14 @@
 - Google Workspace connection expired — cannot verify event address in Google Doc
 
 **Next**
-- Reconnect Google Workspace to confirm Salesforce Tower address is correct
+- Reconnect Google Workspace to confirm Salesforce Tower address
 - Copy both email HTMLs into Pardot email templates
-- Build Pardot form with five hidden UTM fields
+- Build Pardot form with five hidden UTM fields and enable reCAPTCHA in Advanced tab
+- Test form submission with reCAPTCHA and verify thank-you page routing
 - Send test emails from Pardot and preview on desktop and mobile
 - Publish landing page to activate event link in confirmation emails
 
-**Checked live on 2026-11-02:** nothing — the status above is as recorded, not re-checked
+**Checked live on 2026-11-02:** the web
 ### Last session — 2026-11-02
 | | |
 |---|---|
@@ -89,25 +88,24 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-Here's the HTML for both emails. Each code block has a **Copy** button in its top-right corner. Click it, then in Pardot open the email template, switch to the HTML or code view, delete what's there, paste and save.
+Keeping "Maintain the initial value" unticked to match your other forms is the right call.
 
-I made one small change from the files I attached earlier: the dash in "1:30–4:30" is now written as `&ndash;`, so it displays correctly in every email program.
+## Turning on reCAPTCHA
 
-## Email 1: Registered
+1. Open the form in Account Engagement and click **Edit**.
+2. Go to the **Look and Feel** step of the form wizard.
+3. Open the **Advanced** tab.
+4. Tick the reCAPTCHA / bot protection option ("Enable explicit bot protection").
+5. Click through to **Confirm & Save**.
 
-```html
-<!DOCTYPE html>
-<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en-US">
+## Things to know
 
-<head>
-	<title>You're registered: From Roadmap to Reality</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--[if mso]>
-<xml><w:WordDocument xmlns:w="urn:schemas-microsoft-com:office:word"><w:DontUseAdvancedTypographyReadingMail/></w:WordDocument>
-<o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml>
-<![endif]--><!--[if !mso]><!-->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900" rel="stylesheet" type="text/css">
-	<link href="https://fonts.goog
+- **Pardot already has some protection without it.** Pardot shows a reCAPTCHA by itself when it detects an unusual burst of submissions. Turning it on makes every visitor see it.
+- **It works in the page embed.** reCAPTCHA works on Pardot-hosted forms, and the landing page loads your hosted form in an iframe, so it's covered. (Form handlers aren't covered, but we're not using one.)
+- **The form gets taller.** The checkbox adds height. When you send me the iframe link, tell me reCAPTCHA is on and I'll leave room in the embed so the submit button isn't cut off.
+- **Test it once.** It's worth checking that the reCAPTCHA still lets the submission through and that the right thank-you page still opens. You'd do that in the same test submission that checks the UTMs.
+
+I haven't seen your Pardo
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
