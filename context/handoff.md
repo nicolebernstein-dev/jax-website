@@ -42,15 +42,17 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** waiting — Campaign event-26-12-ny-world-tour-edu created in production; awaiting approval to add member statuses
+**Status:** at risk — WordPress draft page built; member statuses blocked on approval card; Pardot form link needed
 
 **Done this session**
-- Confirmed campaign event-26-12-ny-world-tour-edu exists in jaxconsultingllc org (Id 701UJ00001boDNdYAM)
+- Created WordPress draft page at /nyc-education-ai-2026/ (page 3065)
+- Verified campaign member statuses in org; noted new 'Connected' status
 
 **Open items**
-- Approve campaign on the card to proceed with member status changes
-- Add member statuses (Registered, Waitlisted, Attended, No Show)
-- Build WordPress draft page at /nyc-education-ai-2026/
+- Approve card to add member statuses (Registered, Waitlisted, Attended, No Show)
+- Obtain Pardot Form A link for landing page form slot
+- Add member statuses to campaign after approval
+- Publish WordPress page once form link is available
 - Write Pardot guide documentation
 
 **Decisions**
@@ -58,17 +60,19 @@
 - Campaign status: Planned and Active
 - Event date: December 2, 2026
 - Member statuses: Registered (default), Waitlisted, Attended, No Show
+- Preserve existing 'Connected' status; add new statuses after it
 
 **Blockers**
-- None
+- Approval card not yet approved to proceed with member status changes
+- Pardot Form A link not yet provided for landing page
 
 **Next**
-- Await approval on the card
-- Add member statuses to campaign in org
-- Create WordPress draft page
-- Write Pardot guide
+- Approve the card to enable member status update
+- Provide Pardot Form A link
+- Add member statuses to campaign once approval runs
+- Update WordPress page with Pardot form link and publish
 
-**Checked live on 2026-11-02:** nothing — the status above is as recorded, not re-checked
+**Checked live on 2026-11-02:** Google Workspace
 ### Last session — 2026-11-02
 | | |
 |---|---|
@@ -78,7 +82,9 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-I created the campaign **event-26-12-ny-world-tour-edu** in `jaxconsultingllc` (Id `701UJ00001boDNdYAM`) and checked it in the org. It's set to Seminar / Conference, Planned and Active, dated December 2, 2026.
+I created the landing page as a WordPress draft and checked it on the site: [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065), page 3065, at `/nyc-education-ai-2026/`. It isn't published. The form slot shows "Registration form coming soon" until you send me the Pardot Form A link.
 
-The next step is waiting for your approval on the card. That command changes the campaign's member statuses. Salesforce set the defaults to "Sent" and "Responded", so it renames those to **Registered** (the default) and **Waitlisted**, and adds **Attended** and **No Show**. Once you approve it, I'll check the statuses in the org, then build the WordPress draft page at `/nyc-education-ai-2026/` and write the Pardot guide.
+The member statuses are not set up yet. That change is waiting on the approval card. When you approve it, it renames "Sent" to **Registered** (the default) and "Responded" to **Waitlisted**, then adds **Attended** and **No Show**. A status called **Connected** has appeared on the campaign since the last check, so I'm leaving it as it is and adding the new statuses after it. Once it runs, I'll check the statuses in the org.
+
+Sources: the Google Doc's Landing Page section · checked live: the campaign's member statuses, and the WordPress draft read back after I created it · not checked: who added the "Connected" status
 <!-- orchestrate:session-state:end -->
