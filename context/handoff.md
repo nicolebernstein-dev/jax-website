@@ -42,31 +42,29 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Landing page header rebuilt with solid nav bar and calmer photo; awaiting mobile preview and form/email build
+**Status:** on track — Landing page header, photo, button, and spacing fixed; awaiting preview and Pardot form build
 
 **Done this session**
-- Moved site header from floating overlay to solid white bar; photo now starts below
-- Replaced busy Washington Square Park photo with calmer Washington Square Arch shot under clear sky
-- Applied gradient tint (darkest left, lighter right) to improve text readability
-- Fixed side padding on white copy section; aligned with blue band margins
-- Made date, time, location bold
-- Updated photo credit to 'Photo: BruceSchaff, CC BY-SA 4.0'
+- Removed gap between nav bar and photo by relocating hidden note and eliminating extra paragraphs
+- Updated 'Reserve my seat' button to match site style (orange pill, white text, outline hover)
+- Made 'Revecast Orchestrate' link bold
+- Updated NYU line to: 'NYU joins us in person to share their story firsthand.'
 
 **Open items**
-- Preview landing page on mobile and desktop; confirm header, photo, and text readability
+- Preview landing page on mobile and desktop; confirm header, photo spacing, button style, and text readability
 - Build Pardot Form A (Registered action) with five hidden UTM fields
 - Build Pardot Form B (Waitlisted action) as copy of Form A
 - Create two confirmation email templates (registered and waitlist)
 - Provide iframe links for Form A and Form B
 - Provide five UTM Field IDs from Pardot prospect field settings
-- Confirm photo credit approach (current: CC BY-SA 4.0 attribution in bottom-right)
 
 **Decisions**
 - Campaign type: Seminar/Conference
 - Event date: December 2, 2026
-- Header: solid white bar with dark logo/menu; photo below
+- Header: solid white bar with dark logo/menu; photo below with no gap
 - Header photo: Washington Square Arch with One Fifth Avenue, clear blue sky, gradient tint (dark left, light right)
-- Photo credit: displayed in bottom-right corner
+- Photo credit: displayed in bottom-right corner (CC BY-SA 4.0)
+- Button style: orange pill (#ff9a00) with bold white text, orange outline on hover
 - Thank-you pages at /nyc-education-ai-2026/thank-you/ and /nyc-education-ai-2026/waitlist/
 - UTM capture via script on landing page (iframe limitation)
 
@@ -74,7 +72,7 @@
 - None
 
 **Next**
-- Preview rendered landing page on desktop and mobile; check header bar, photo, and text contrast
+- Preview rendered landing page on desktop and mobile; verify nav-to-photo spacing, button appearance, and text contrast
 - Build Pardot Form A with five hidden UTM fields and Registered member action
 - Build Pardot Form B as copy of Form A with Waitlisted member action
 - Create two confirmation email templates for autoresponder
@@ -90,16 +88,16 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-I've made all four changes to the draft landing page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065). I read the page back after saving: the changes are there and it's still a draft.
+I've made all four changes to the draft landing page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065). After saving, I checked the page WordPress now outputs: the changes are in it, and the page is still a draft.
 
 | Your feedback | What I changed |
 |---|---|
-| Nav shouldn't sit on the image | The site header is normally see-through and floats over the first section. On this page only, it's now a solid white bar with the dark logo and dark menu links, and the photo starts below it. The rest of the site is unchanged. |
-| Image too busy, X still showing, hard to read | **The X pattern is gone.** I also replaced the photo with a calmer one: the Washington Square Arch with One Fifth Avenue behind it under a clear blue sky, in autumn. The tint is darkest on the left behind the text and lighter on the right. |
-| Side padding on the copy | Fixed. The white section had lost its side margins, so I put it in the site's standard page container, the same one the blue band uses. Both sections now line up with the same side spacing. |
-| Bold date, time and location | "Wednesday, December 2, 2026 / 1:30–4:30 PM ET / Salesforce Tower" is now bold. |
+| Gap between the nav bar and the photo | The gap came from a hidden note at the top of the page. WordPress was wrapping it in an empty paragraph, and that pushed the photo down. I moved the note inside the header section and stopped WordPress from adding those extra paragraphs. As a backup, I also set the page content to start right under the nav bar with no spacing. |
+| Button should match the site | The "Reserve my seat" button now uses the same button style as the rest of the site, like the "Learn More" button in your screenshot. It's an orange (#ff9a00) pill shape with bold white text, and it turns to an orange outline when you hover over it. |
+| Bold "Revecast Orchestrate" link | Done. The link is now bold. |
+| NYU line under the title | It now reads: **"NYU joins us in person to share their story firsthand."** |
 
-**Photo credit:** this photo is CC BY-SA 4.0, so it needs
+**Please check the preview:** I can't see the rendered page from here, so look at it on a
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
