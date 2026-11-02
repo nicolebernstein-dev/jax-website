@@ -42,17 +42,18 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Form repositioned with title in own row; NYU line finalized. Preview needed on computer & phone; reCAPTCHA, testing, thank-you pages remain.
+**Status:** on track — Form repositioned & hero shortened; preview on computer & phone needed before reCAPTCHA, testing, thank-you pages
 
 **Done this session**
-- Removed 'Reserve my seat' heading above form
-- Repositioned form: eyebrow and title in full-width row; details left, form right on desktop; stacked on mobile
-- Form top now aligns with NYU line, title sits above
+- Moved 'Spaces are limited' note under 'Hosted by' line with blank line separator
+- Reduced hero height: 40px below (was 100px), 80px above (was 100px) on desktop
+- Overrode theme padding on mobile/tablet: 56px above, 36px below hero
+- Verified changes saved in WordPress draft
 
 **Open items**
 - Preview landing page on computer and phone; confirm title wrapping, form fit, button visibility, spacing
 - Reconnect Google Workspace to verify Salesforce Tower event address
-- Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height (~90px additional)
+- Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height if needed
 - Test form submission with ?utm_source=test&utm_campaign=test; verify UTMs, prospect record, confirmation email, thank-you page routing
 - Create /thank-you/ and /waitlist/ pages with wording (draft or provide copy)
 - Send test emails from Pardot; preview rendering on desktop and mobile
@@ -88,12 +89,14 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-I've made both changes to the draft landing page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065). The saved page includes them, and it's still a draft.
+I've moved the note and shortened the hero on the draft landing page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065). I checked the version WordPress saved: both changes are in it, and the page is still a draft.
 
-- **"Reserve my seat" heading:** removed from above the form. The orange "Reserve my seat" button at the bottom of the page is still there and still jumps up to the form.
-- **Form position:** the eyebrow ("In Person · New York City") and the event title now sit in their own full-width row at the top of the header. Below that, the NYU line, date, time, location and "Hosted by" note are on the left, and the form is on the right. The top of the form now lines up with the NYU line, so the title is above it. On phones the order is title, details, then form.
+- **"*Spaces are limited.":** it now sits under "Hosted by Jax Consulting in partnership with Salesforce.", with a blank line between them. It's no longer under the form.
+- **Hero height:** on computers, the space below the hero content is now 40px instead of 100px, and the space above it is 80px instead of 100px. On tablets and phones, the site's theme was forcing 83px above and below and ignoring the page's own setting. I overrode that on this page only, so it's now 56px above and 36px below. The photo credit still sits in the bottom-right corner.
 
-**Please check the preview on a computer.** The title now spans most of the width, so it may wrap onto two lines instead of three or four. If it looks too wide, I can narrow it, or move the form a bit further down.
+**Please check the preview on a computer and a phone.** I can't see the page as it displays from here. On computers, the form is now the tallest thing in the hero, so most of what's left at the bottom is the form box itself. If there's still too much space, tell me and I'll trim the form box too. I'd do that in small steps so the submit button doesn't get cut off.
 
-Sources: checked live: the draft page (read before saving, and the saved version WordPress returned) · not checked: how the page looks in a browser
+Sources: checked live: the draft page (re
+
+_[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
