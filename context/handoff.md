@@ -42,38 +42,40 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-02
-**Status:** on track — Video thumbnail live & working; featured image needs save; preview & reCAPTCHA next
+**Status:** on track — Thank-you pages drafted & featured image set; preview & Pardot config next
 
 **Done this session**
-- Video thumbnail uploaded and linked; play button positioned below text, loads correctly at 944×526
+- Created /nyc-education-ai-2026-registered/ thank-you page (draft)
+- Created /nyc-education-ai-2026-waitlist/ thank-you page (draft)
+- Featured image now set on landing page
 
 **Open items**
-- Reload page editor, set featured image, save draft to persist it (WordPress showing none currently)
-- Preview landing page on computer and phone; confirm title wrapping, form fit, button visibility, spacing, video play behavior
-- Upload featured image (nyc-event-featured-image-1200x630.jpg) to Media Library if not already done
+- Preview both thank-you pages on computer and phone; report any changes needed
+- Set Yoast 'Allow search engines' to No on both thank-you pages
+- Publish both thank-you pages before test submission
+- Add Thank You Code to Pardot form (registered page URL initially, switch to waitlist at 30 registrations)
 - Enable reCAPTCHA in Pardot form Advanced tab; adjust form box height if needed
 - Test form submission with ?utm_source=test&utm_campaign=test; verify UTMs, prospect record, confirmation email, thank-you page routing
-- Create /thank-you/ and /waitlist/ pages with wording (draft or provide copy)
-- Reconnect Google Workspace to verify Salesforce Tower event address
-- Decide: remove 'first-hand' from blue section or keep it
+- Reload page editor, set featured image, save draft to persist it
 
 **Decisions**
 - Campaign type: Seminar/Conference
 - Event date: December 2, 2026
 - Single Pardot form handles both Registered and Waitlisted actions
 - Form name: 'event-26-12-ny-world-tour-edu – Registration Form'
-- Hidden UTM fields use existing Jax form field names and labels
-- Page script routes to correct thank-you page based on registration count
-- Cutover at 30 registrations: single Step 6 edit session in Pardot
+- Thank-you page URLs: /nyc-education-ai-2026-registered/ and /nyc-education-ai-2026-waitlist/ (not /thank-you/ to avoid conflict)
+- Cutover at 30 registrations: single Step 6 edit session in Pardot to change Thank You Code URL
 - Confirmation emails use Jax layout, Montserrat/Nunito fonts, blue #0c83df links, merge tags {{Recipient.FirstName}} and {{Unsubscribe}}
 
 **Blockers**
 - Google Workspace connection expired — cannot verify event address in Google Doc
 
 **Next**
-- Reload page editor, set featured image again, click Save draft, confirm save completed
-- Preview draft page on computer and phone; test video play; report title wrapping, form fit, button visibility, spacing
-- Enable reCAPTCHA in Pardot form Advanced tab and adjust form box height if needed
+- Preview both thank-you pages on computer and phone; report desired changes
+- Set Yoast 'Allow search engines to show this page' to No on both pages
+- Publish both thank-you pages
+- Add Thank You Code to Pardot form with registered page URL
+- Enable reCAPTCHA and test form submission end-to-end
 
 **Checked live on 2026-11-02:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-02
@@ -85,17 +87,23 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-The video now uses your 0:59 thumbnail, but the featured image isn't showing as set yet. The draft page, [From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3065), saved and is still a draft.
+I've created both thank-you pages as drafts in WordPress. Both saved and neither is published.
 
-**Video thumbnail:** done.
-- The video box now uses your Video-thumbnail.png. I checked the link and the image loads.
-- The orange play button sits about three-quarters of the way down, below the "Build a production deployed Agentforce agent" box, so it doesn't cover the text. On phones it's a bit smaller.
-- WordPress was adding line breaks inside the video box, which could have pushed the image down and left a black strip at the top. I put that code on one line and hid any stray line breaks.
-- Your image is 944×526, which is slightly wider than the player's 16:9 shape. About 4px gets trimmed off each side, which you won't notice.
+- **Registered:** [You're Registered: From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3083)
+- **Waitlist:** [You're on the Waitlist: From Roadmap to Reality](https://www.jaxconsult.com/?page_id=3084)
 
-**Featured image:** WordPress still shows no featured image saved on this page. Because of that, Yoast is now using the video thumbnail as the link preview image on LinkedIn, Slack and email, not the Washington Square Arch photo. Usually this means the image was chosen in the editor but the page wasn't saved afterwards.
+**The address is different from what we planned.** The site already has a live page at `/thank-you/` (the general "Thank you for contacting us" page). So I gave these their own addresses so that page isn't affected:
+- `jaxconsult.com/nyc-education-ai-2026-registered/`
+- `jaxconsult.com/nyc-education-ai-2026-waitlist/`
 
-**Before you save in the editor, r
+**What they look like:** both use the same white top menu and Washington Square Arch photo as the landing page. The text sits in a dark navy box in the middle, with the photo credit in the corner.
+
+**Registered page**
+- Small heading: You're registered
+- Main heading: **Your seat is reserved. See you on December 2.**
+- It says their confirmation email is on its way, then lists the date, time and Salesforce Tower.
+- It tells them to check spam if the email doesn't arrive, and gives sales@jaxconsult.com.
+- Buttons: an orange **Add to Google Calendar** button (1:30–
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
