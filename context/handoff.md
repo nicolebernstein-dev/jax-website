@@ -42,21 +42,22 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-03
-**Status:** on track — Email greetings updated to 'Hi,' — PDFs refreshed. Ready to post announcement and complete remaining setup tasks.
+**Status:** on track — Button fixed, page styles & scripts restored. Ready for browser testing and Pardot confirmation.
 
 **Done this session**
-- Updated Registration Confirmation Email PDF with 'Hi,' greeting
-- Updated Waitlist Confirmation Email PDF with 'Hi,' greeting
-- Verified both PDFs are one page with logos at top and bottom
+- Fixed 'Reserve my seat' button sizing on live page
+- Restored page styles to one line — nav bar, hero spacing, form height, video layout now load
+- Restored both scripts to one line — form redirect and video click should work
+- Removed stray WordPress tags from HTML
 
 **Open items**
+- Confirm Pardot email greeting is 'Hi,' — if different wording, report so PDFs can be updated
 - Remove 2 test leads from Salesforce campaign before posting announcement
 - Post Slack announcement with updated email PDFs to team channel
 - Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-registered/
 - Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-waitlist/
-- Preview both thank-you pages on computer and phone; report desired changes
-- Confirm Pardot email greeting matches 'Hi,' or update PDFs if different wording used
-- Monitor registrations and update Pardot form completion actions when 30 registrations reached
+- Test page in browser on computer and phone; do one test registration to confirm thank-you redirect
+- Report any desired changes to page design or video play-button icon
 
 **Decisions**
 - Completion action order: Assign prospect → Add to Salesforce Campaign → Send autoresponder → Notify user → Add tag
@@ -66,16 +67,17 @@
 - Form name: 'event-26-12-ny-world-tour-edu – Registration Form'
 - Confirmation emails use Jax layout, Montserrat/Nunito fonts, blue #0c83df links
 - Email greeting: 'Hi,' (no first name)
+- Button sizing set directly on button element to prevent WordPress override
 
 **Blockers**
 - None
 
 **Next**
-- Confirm Pardot email greeting is 'Hi,' — if different, report wording so PDFs can be updated
-- Remove 2 test leads from campaign in Salesforce
-- Post Slack announcement with updated email PDFs to team channel
-- Set Yoast SEO settings on both thank-you pages
-- Preview thank-you pages on computer and phone; report any desired changes
+- Test live page in browser on computer and phone — measure button, test form redirect, click video
+- Do one test registration and confirm redirect to thank-you page works
+- Confirm Pardot email greeting matches 'Hi,' or report actual wording
+- Remove 2 test leads from Salesforce campaign
+- Post Slack announcement with updated email PDFs
 
 **Checked live on 2026-11-03:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-03
@@ -84,19 +86,18 @@
 | Type | BUILD |
 | Outcome | COMPLETED |
 | Branch | `main` |
-| Name | NY World Tour Event Registration Page |
-| Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
+| Name | Event Landing Page Updates |
+| Session | `b4cbb9e8-f3b5-4243-ad77-15da62c2f183` |
 **In its own words (excerpt):**
-I've updated both email PDFs. The greeting now reads "Hi," and no longer includes the first name. Both PDFs are attached to this session:
+I've updated the live page at [jaxconsult.com/nyc-education-ai-2026](https://www.jaxconsult.com/nyc-education-ai-2026/). The "Reserve my seat" button now uses the site's standard orange button sizing and should no longer stretch across the column.
 
-- **Registration Confirmation Email Preview**
-- **Waitlist Confirmation Email Preview**
+**What changed:**
+- **Button:** I set the sizing directly on the button itself, so WordPress can't break it again.
+- **Page styles:** I put the style code on one line. The design it was built with now loads: the white nav bar, the hero spacing, the form height and the video thumbnail layout.
+- **Scripts:** I put both scripts on one line too. Registrants should now be sent to the registered or waitlist thank-you page after they submit, and clicking the video should play it.
+- **Clean-up:** I removed a few stray tags WordPress had added after the HTML comments. The page's text is unchanged.
 
-I opened both and checked them. Each is one page and has the logos at the top and bottom. Nothing else changed.
+**What I checked:** The live page's style and script code no longer has any of those stray line breaks, and both scripts are now valid code that will run. I couldn't open the page in a browser this run, so I haven't measured the button or watched the redirect and video click work. Please look at it on your computer and phone, and do one test registrati
 
-I couldn't see your Pardot version, so I assumed the greeting there is now "Hi,". If you used different wording, like "Hello," or no greeting at all, tell me and I'll update the PDFs to match.
-
-The Slack message from before still works with these. Just attach the new PDFs.
-
-Sources: checked live: nothing in Pardot (I can't access it) · not checked: the exact greeting in your Pardot emails
+_[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
