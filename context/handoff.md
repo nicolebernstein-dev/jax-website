@@ -42,41 +42,38 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-03
-**Status:** at risk — Form redirect working; Salesforce sync blocked — awaiting Pardot completion action fix and test submission
+**Status:** on track — Registration live, Salesforce sync confirmed. Remove 2 test leads from campaign, then post announcement.
 
 **Done this session**
-- Provided detailed completion action sequence for Pardot form (assign → campaign → email → notify → tag)
-- Documented 30-registration threshold changes (Status and email swap to Waitlist)
+- Drafted Slack announcement with landing page, campaign, and thank-you page links
+- Generated Registration Confirmation and Waitlist Confirmation email PDFs
+- Verified landing page is published and Salesforce campaign exists with 2 test leads
+- Documented 30-registration threshold workflow and UTM tracking instructions
 
 **Open items**
-- Add 'Assign prospect to user/queue' completion action before 'Add to Salesforce Campaign' in Pardot form
-- Assign existing test prospects to a user in Pardot to trigger sync
-- Submit new test form with fresh +test address after fix is applied
-- Verify lead and campaign member appear in Salesforce within 10–15 minutes
+- Remove 2 test leads from Salesforce campaign before posting announcement
+- Post Slack announcement with attached email PDFs to team channel
 - Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-registered/
 - Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-waitlist/
-- At 30 registrations, change both 'registered' to 'waitlist' in Pardot Thank You Code
 - Preview both thank-you pages on computer and phone; report desired changes
+- Monitor registrations and update Pardot form completion actions when 30 registrations reached
 
 **Decisions**
 - Completion action order: Assign prospect → Add to Salesforce Campaign → Send autoresponder → Notify user → Add tag
 - At 30 registrations: swap campaign Status to Waitlisted and email to Waitlist Confirmation
-- Waitlisted prospects must also sync to Salesforce (keep assignment step unchanged)
-- Thank You Code uses postMessage signal + try/catch window.top.location redirect to handle browser blocking
 - Campaign type: Seminar/Conference; Event date: December 2, 2026
 - Single Pardot form handles both Registered and Waitlisted actions
 - Form name: 'event-26-12-ny-world-tour-edu – Registration Form'
 - Confirmation emails use Jax layout, Montserrat/Nunito fonts, blue #0c83df links
 
 **Blockers**
-- Pardot form missing 'Assign prospect to user/queue' completion action — prevents lead creation in Salesforce
+- None
 
 **Next**
-- Add 'Assign prospect to user/queue' completion action to Pardot form (place before 'Add to Salesforce Campaign')
-- Assign existing test prospects to a user in Pardot to trigger retroactive sync
-- Submit new test form with fresh +test email address
-- Verify lead and campaign member appear in Salesforce within 10–15 minutes
-- Report results before proceeding with Yoast SEO and thank-you page preview
+- Remove 2 test leads from campaign in Salesforce
+- Post Slack announcement with email PDFs to team channel
+- Set Yoast SEO settings on both thank-you pages
+- Preview thank-you pages and report any desired changes
 
 **Checked live on 2026-11-03:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-03
@@ -88,24 +85,26 @@
 | Name | NY World Tour Event Registration Page |
 | Session | `e68d87da-5721-417e-adfc-c7124417d40e` |
 **In its own words (excerpt):**
-Here's the order to use in the form's **Completion Actions**, top to bottom:
+I've drafted the Slack message below. The two confirmation emails are attached to this session as PDFs. Pardot email links only open for people with Pardot access, so post the PDFs with the message.
 
-1. **Assign prospect to user** (or **Assign prospect via Salesforce active assignment rule**, or **Assign to queue**, whichever your other Jax forms use). This is the step that makes Pardot create the lead in Salesforce.
-2. **Add to Salesforce Campaign:** `event-26-12-ny-world-tour-edu`, Status **Registered**.
-3. **Send autoresponder email:** `event-26-12-ny-world-tour-edu – Registration Confirmation`.
-4. **Notify user** (optional): the event owner, if you want an email for each registration.
-5. **Add tag** (optional): `event-26-12-ny-registered`.
+---
 
-**At 30 registrations**, change only two of these:
-- Step 2: Status → **Waitlisted**
-- Step 3: email → **Waitlist Confirmation**
-- (and step 5's tag → `event-26-12-ny-waitlisted`, if you use it)
+:tada: **The NYC World Tour education event registration is live**
 
-Leave step 1 as it is. Waitlisted people need to sync to Salesforce too.
+*From Roadmap to Reality: Governed AI That Elevates the Student Experience*
+Wednesday, December 2, 2026 · 1:30–4:30 PM ET · Salesforce Tower
 
-Once you've saved the form, assign your existing test prospects to a user, then submit one more test with a new +test address. Tell me when that's done and I'll check Salesforce for the lead and the campaign member.
+**Links**
+• *Landing page:* https://www.jaxconsult.com/nyc-education-ai-2026/
+• *Salesforce campaign:* <https://jaxconsultingllc.lightning.force.com/lightning/r/Campaign/701UJ00001boDNdYAM/view|event-26-12-ny-world-tour-edu>
+• *Registration thank-you page:* https://www.jaxconsult.com/nyc-education-ai-2026-registered/
+• *Registration confirmation email:* attached (Registration Confirmation Email Preview PDF)
 
-Sources: engagement context (context/handoff.md) and the D01 forms guide from ea
+**How it works**
+Registrants fill out the Pardot form on the landing page. Pardot then creates the lead in Salesforce, adds them to the campaign as *Registered*, sends the confirmation email and takes them to the thank-you page.
+
+:warning: **After 30 registrations, we switch to the waitlist**
+When we reach 30, we'll update the form in Pardot. From then on, new registrant
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
