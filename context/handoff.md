@@ -42,16 +42,14 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-09
-**Status:** on track — Live page updated with hero restructure and 22px heading. Awaiting browser test and registration confirmation.
+**Status:** on track — Live page updated: form repositioned, 3 headings set to 28px. Awaiting browser verification and test registration.
 
 **Done this session**
-- Merged draft content to live page: hero line, date/time/location, 'What you will leave with' section with 22px heading
-- Updated 'NYU' to 'NYU Stern' in blue box
-- Moved 'Spaces are limited' text below Reserve button
-- Preserved all other page elements and scripts
+- Repositioned form to align with left text on desktop screens
+- Set 'What you will leave with', 'What is Orchestrate?', and 'Who should attend' headings to 28px
 
 **Open items**
-- Test live page in browser on computer and phone to verify hero layout and responsiveness
+- Test live page in browser on computer and phone to verify form position and heading sizes
 - Submit one test registration and confirm redirect to thank-you page works
 - Confirm Pardot email greeting matches 'Hi,' or report actual wording
 - Remove 2 test leads from Salesforce campaign
@@ -63,15 +61,16 @@
 - At 30 registrations: swap campaign Status to Waitlisted and email to Waitlist Confirmation
 - Campaign type: Seminar/Conference; Event date: December 2, 2026
 - Single Pardot form handles both Registered and Waitlisted actions
-- 'What you will leave with' heading set to 22px on live page
+- 'What you will leave with', 'What is Orchestrate?', and 'Who should attend' headings set to 28px on live page
 
 **Blockers**
 - None
 
 **Next**
-- Open live page on computer and phone; verify hero layout and 22px heading appearance
+- Open live page on computer and phone; verify form alignment and 28px heading appearance
+- Report any form position or heading size adjustments needed (e.g., 'form a bit lower')
 - Submit test registration; confirm thank-you page redirect works
-- Report any layout or styling issues or confirm page is ready for outreach
+- Notify Karen page is ready for outreach
 
 **Checked live on 2026-11-09:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-09
@@ -83,18 +82,17 @@
 | Name | Update NY Event Registration Page |
 | Session | `5d3c0f45-ef5a-4fd1-895c-99a7b5b0cfd8` |
 **In its own words (excerpt):**
-The live page is updated: [jaxconsult.com/nyc-education-ai-2026](https://www.jaxconsult.com/nyc-education-ai-2026/). WordPress returned the saved page, still published, with the new content in it. It's saved as a new revision, and the earlier version is still in the page history if you want to go back to it.
+I've updated the live page: [jaxconsult.com/nyc-education-ai-2026](https://www.jaxconsult.com/nyc-education-ai-2026/). WordPress shows it's still published with both changes in it. It was saved as a new revision, and the earlier version is still in the page history.
 
-**What changed on the live page:**
-1. **Hero line:** "The NYU Stern team joins in person to share how they are using Orchestrate to accelerate their Salesforce work."
-2. **Date, time and location** stay left-aligned, as they were before.
-3. **"What you will leave with"** (the heading and 6 bullets, in white) now sits in the hero, under the date, time and location.
-4. **Blue box:** same text in the same place, with "NYU" changed to "NYU Stern" twice.
-5. **"Spaces are limited."** has moved down to just under the Reserve my seat button.
+**What changed:**
+1. **The form sits lower.** It now starts at the same height as the text on the left, instead of one line above it. This only applies on computer-width screens. On phones the form stays below the text, as before.
+2. **The three headings are 28px:** "What you will leave with", "What is Orchestrate?" and "Who should attend". Before, the first was 22px and the other two used the theme's larger default size.
 
-**One thing I added:** the "What you will leave with" heading uses the smaller 22px size you approved on the draft. I set it on that heading only and didn't touch the page's shared styling. Tell me if you'd rather have it back at the full heading size.
+Nothing else changed. The text, the form, the scripts, the video and the rest of the styling are all as they were.
 
-**Not changed:** the title, the page styling, the Pardot form, the UTM and redirect scripts, t
+I haven't viewed the public page in a browser, so please look at it on your computer. If the form needs to go lower or higher, give me a rough amount, like "a bit more" or "half a line less", and I'll adjust it. On your earlier list, the test registration and letting Karen know the page is ready are still open.
+
+Sources: checked live: WordPress page 3065, read before saving and checked 
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
