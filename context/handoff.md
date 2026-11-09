@@ -41,23 +41,22 @@
 <!-- orchestrate:session-state:start -->
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
-### Engagement state — 2026-11-03
-**Status:** on track — Button fixed, page styles & scripts restored. Ready for browser testing and Pardot confirmation.
+### Engagement state — 2026-11-09
+**Status:** on track — Draft copy created for review; live page unchanged. Awaiting approval to merge to production.
 
 **Done this session**
-- Fixed 'Reserve my seat' button sizing on live page
-- Restored page styles to one line — nav bar, hero spacing, form height, video layout now load
-- Restored both scripts to one line — form redirect and video click should work
-- Removed stray WordPress tags from HTML
+- Created draft with updated hero line, 'What you will leave with' bullets in hero, and 'NYU Stern' branding
+- Positioned 'Spaces are limited' under Reserve my seat button
+- Confirmed draft is unpublished and preview-ready
 
 **Open items**
-- Confirm Pardot email greeting is 'Hi,' — if different wording, report so PDFs can be updated
-- Remove 2 test leads from Salesforce campaign before posting announcement
-- Post Slack announcement with updated email PDFs to team channel
-- Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-registered/
-- Set Yoast 'Allow search engines' to No on /nyc-education-ai-2026-waitlist/
-- Test page in browser on computer and phone; do one test registration to confirm thank-you redirect
-- Report any desired changes to page design or video play-button icon
+- Approve or request changes to draft copy and layout (hero height, bullet placement, spacing)
+- Merge approved draft content to live page and confirm styling applies
+- Test live page in browser on computer and phone after merge
+- Do one test registration and confirm redirect to thank-you page works
+- Confirm Pardot email greeting matches 'Hi,' or report actual wording
+- Remove 2 test leads from Salesforce campaign
+- Post Slack announcement with updated email PDFs
 
 **Decisions**
 - Completion action order: Assign prospect → Add to Salesforce Campaign → Send autoresponder → Notify user → Add tag
@@ -73,31 +72,34 @@
 - None
 
 **Next**
-- Test live page in browser on computer and phone — measure button, test form redirect, click video
-- Do one test registration and confirm redirect to thank-you page works
-- Confirm Pardot email greeting matches 'Hi,' or report actual wording
-- Remove 2 test leads from Salesforce campaign
-- Post Slack announcement with updated email PDFs
+- Review draft preview and approve or request changes to text and layout
+- Once approved, merge draft content to live page and switch styling back to live
+- Test live page in browser on computer and phone after merge
 
-**Checked live on 2026-11-03:** nothing — the status above is as recorded, not re-checked
-### Last session — 2026-11-03
+**Checked live on 2026-11-09:** nothing — the status above is as recorded, not re-checked
+### Last session — 2026-11-09
 | | |
 |---|---|
 | Type | BUILD |
 | Outcome | COMPLETED |
 | Branch | `main` |
-| Name | Event Landing Page Updates |
-| Session | `b4cbb9e8-f3b5-4243-ad77-15da62c2f183` |
+| Name | Update NY Event Registration Page |
+| Session | `5d3c0f45-ef5a-4fd1-895c-99a7b5b0cfd8` |
 **In its own words (excerpt):**
-I've updated the live page at [jaxconsult.com/nyc-education-ai-2026](https://www.jaxconsult.com/nyc-education-ai-2026/). The "Reserve my seat" button now uses the site's standard orange button sizing and should no longer stretch across the column.
+I've created the draft copy for you to review. It's unpublished, so only signed-in WordPress users can see it. The live page hasn't been touched.
 
-**What changed:**
-- **Button:** I set the sizing directly on the button itself, so WordPress can't break it again.
-- **Page styles:** I put the style code on one line. The design it was built with now loads: the white nav bar, the hero spacing, the form height and the video thumbnail layout.
-- **Scripts:** I put both scripts on one line too. Registrants should now be sent to the registered or waitlist thank-you page after they submit, and clicking the video should play it.
-- **Clean-up:** I removed a few stray tags WordPress had added after the HTML comments. The page's text is unchanged.
+**Preview:** sign in to WordPress, then open [the draft preview](https://www.jaxconsult.com/?page_id=3092&preview=true). In the Pages list it's titled "[DRAFT REVIEW] From Roadmap to Reality…".
 
-**What I checked:** The live page's style and script code no longer has any of those stray line breaks, and both scripts are now valid code that will run. I couldn't open the page in a browser this run, so I haven't measured the button or watched the redirect and video click work. Please look at it on your computer and phone, and do one test registrati
+**What's different from the live page:**
+1. **Hero line:** "The NYU Stern team joins in person to share how they are using Orchestrate to accelerate their Salesforce work."
+2. **"What you will leave with"** (heading and the 6 bullets) is now in the hero, under the date, time and Salesforce Tower, and above "Hosted by Jax Consulting…". I set it to white so it shows on the dark photo.
+3. **Blue box:** same text in the same place. The only change is "NYU" → "NYU Stern" (twice).
+4. **"Spaces are limited."** has moved from the hero to just under the Reserve my seat button.
+
+Everything else is copied exactly: the form, the scripts, the video and the layout. I saved the draft and read it back to confirm the text and that it's still unpublished.
+
+**Things to check in the preview:**
+- The hero's left side is now longer than the form beside it, because the
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
