@@ -41,63 +41,63 @@
 <!-- orchestrate:session-state:start -->
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
-### Engagement state — 2026-11-09
-**Status:** at risk — Page updates live & verified. Karen notification blocked by Slack access limits — needs manual send or member ID.
+### Engagement state — 2026-11-11
+**Status:** at risk — Page updates live & verified. Link migration runbook ready for WordPress admin. Karen notification still blocked.
 
 **Done this session**
-- Attempted to notify Karen via Slack; drafted message ready to send
-- Confirmed page changes are live and saved in WordPress
+- Validated search-and-replace strategy on 3 live pages; tested 16 rewritten URLs—all load correctly
+- Created WordPress admin runbook with dry-run steps, undo plan, and CLI alternative
 
 **Open items**
-- Test live page in browser on computer and phone to verify form position, heading sizes, and spacing
-- Submit one test registration and confirm redirect to thank-you page works
-- Confirm Pardot email greeting matches 'Hi,' or report actual wording
+- WordPress admin executes link migration (3 replacements in order, dry run first, cache clear, spot-check)
+- Recheck all 20 pages and test every link after migration completes
+- Test live page in browser on computer and phone; verify form position, heading sizes, spacing
+- Submit test registration and confirm thank-you page redirect works
+- Confirm Pardot email greeting wording matches 'Hi,' or report actual text
 - Remove 2 test leads from Salesforce campaign
-- Post Slack announcement with updated email PDFs
-- Send Karen notification — requires her Slack member ID, alternative channel, or manual copy-paste
-- Provide corrected Salesforce campaign link if it should be included in Karen message
+- Send Karen notification—requires her Slack member ID, alternative channel, or manual copy-paste
 
 **Decisions**
 - Completion action order: Assign prospect → Add to Salesforce Campaign → Send autoresponder → Notify user → Add tag
 - At 30 registrations: swap campaign Status to Waitlisted and email to Waitlist Confirmation
 - Campaign type: Seminar/Conference; Event date: December 2, 2026
 - Single Pardot form handles both Registered and Waitlisted actions
-- Heading sizes set to 28px; 'Spaces are limited.' set to 14px with line space after Reserve button
+- Heading sizes 28px; 'Spaces are limited.' 14px with line space after Reserve button
+- Link migration: case-study replacement must run first to avoid old addresses
 
 **Blockers**
-- Slack token type does not allow message search or member lookup — cannot identify or contact Karen without external input
+- Slack token type does not allow message search or member lookup—cannot identify or contact Karen without external input
+- 17 of 20 audit pages not yet tested for sandbox/localhost links; migration may surface unmapped addresses
 
 **Next**
-- Provide Karen's Slack member ID, a channel name, or send the draft message yourself
-- Test live page in browser on computer and phone; report any further form position adjustments needed
-- Submit test registration and confirm thank-you page redirect works
-- Confirm Pardot email greeting wording
+- WordPress admin: back up live database, install Better Search Replace, run dry run of 3 replacements in order
+- WordPress admin: execute replacements, clear caches, spot-check for pantheonsite and localhost in page source
+- WordPress admin: report completion; session will recheck all 20 pages and test every link
+- Provide Karen's Slack member ID, alternative contact channel, or send draft message yourself
 
-**Checked live on 2026-11-09:** Slack
-### Last session — 2026-11-09
+**Checked live on 2026-11-11:** nothing — the status above is as recorded, not re-checked
+### Last session — 2026-11-11
 | | |
 |---|---|
 | Type | BUILD |
 | Outcome | COMPLETED |
 | Branch | `main` |
-| Name | Update NY Event Registration Page |
-| Session | `5d3c0f45-ef5a-4fd1-895c-99a7b5b0cfd8` |
+| Name | Jax Site Updates |
+| Session | `6f0571c3-0a1e-497d-bea1-497f5e8f0665` |
 **In its own words (excerpt):**
-I couldn't find Karen on Slack, so nothing has been sent yet. Here's the message, ready to go.
+A search-and-replace will work even though the links are unique. The replace only swaps the wrong start of each link and keeps the rest exactly as it was. For example, `live-jax-consult.pantheonsite.io/services/data-ai/` becomes `www.jaxconsult.com/services/data-ai/`.
 
-**What went wrong:**
-- Slack search came back with `not_allowed_token_type`, so this connection can't search messages.
-- I looked up 8 members of #oct-all-delivery-meeting by their IDs. Every lookup came back `user_not_found`, so I can't match a name to a person.
-- I'm not a member of #jax_revecast-marketing, so I couldn't read who posts there.
-- I've stopped trying, rather than guess who Karen is.
+I tested this today on Home, Industries > Nonprofit and Industries > Public Sector. I pulled 19 unique sandbox and localhost links from those pages, swapped the start, and got 16 distinct live addresses. All 16 load a working page on www.jaxconsult.com, including service pages, case studies (moved to /insights/) and images.
 
-**Draft message to Karen:**
-
-> Hi Karen, the NYC event page is updated and ready for outreach: https://www.jaxconsult.com/nyc-education-ai-2026/
->
-> What changed, based on our call:
-> • **New hero line:** "The NYU Stern team joins in person to share how they are using Revecast Orchestrate to accelerate their Salesforce work." The generic "putting AI to work" wording is gone.
-> • **"What you will leave with" is now at the top**, in the hero under the date, time and location, so people see the takeaways without scrolling. The bullets now focus on practical results: how NYU Stern uses Orchestrate from data migration to delivery, a focused session on Agentforce for IT Services, a live AI-assisted
+**Steps for your WordPress admin:**
+1. **Back up the live database** in Pantheon: Live → Backups → Create New Backup.
+2. **Install Better Search Replace** (Plugins → Add New), then open it from Tools → Better Search Replace.
+3. **Do a dry run of three replacements, in this order,** with all tables selected:
+   - `live-jax-consult.pantheonsite.io/case-study/` → `www.jaxconsult.com/insights/`
+   - `live-jax-consult.pantheonsite.io` → `www.jaxconsult.com`
+   - `http://localhost/jax-consulting` → `https://www.jaxconsult.com`
+4. **Check the counts** from the dry run look sensible.
+5. **Run all three f
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
