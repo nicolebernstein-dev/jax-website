@@ -42,20 +42,22 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-11
-**Status:** at risk — Case study draft saved; link migration & module rebuild blocked on WordPress admin & theme code
+**Status:** on track — Case study draft 3101 rebuilt with proper card modules; ready for WordPress metadata & browser testing
 
 **Done this session**
-- Identified blocker: ACF block structure not accessible via API; HTML fallback created instead
+- Rebuilt case study draft 3101 with acf/card-simple blocks (Challenges, Solution, Results)
+- Verified card modules saved and readable from WordPress; no client names exposed
+- Documented block code extraction method for future case studies
 
 **Open items**
+- Set Case Study category and matching topic on draft 3101
+- Add featured image to draft 3101
+- Add meta description in Yoast on draft 3101
+- Review & decide whether to reword second Results card (starts with '$1M+' like first)
+- Preview draft 3101 in browser (desktop & mobile); verify card layout, spacing, form
 - WordPress admin: back up live database, install Better Search Replace, run dry run & execute link migration
-- Obtain Continuing Studies case study block code (Code editor → copy all) or duplicate & swap text manually
-- Rebuild case study draft 3101 with proper card modules (Challenges, Solution, Results) once block structure known
-- Set Category, Topic, Featured image, Meta description on case study
 - Recheck all 20 pages and test every link after link migration completes
-- Test live page in browser (desktop & mobile); verify form, heading sizes, spacing
-- Submit test registration and confirm thank-you page redirect
-- Confirm Pardot email greeting wording; remove 2 test leads from Salesforce campaign
+- Test live page form submission and thank-you page redirect; confirm Pardot email greeting
 
 **Decisions**
 - Completion action order: Assign prospect → Add to Salesforce Campaign → Send autoresponder → Notify user → Add tag
@@ -64,21 +66,19 @@
 - Single Pardot form handles both Registered and Waitlisted actions
 - Heading sizes 28px; 'Spaces are limited.' 14px with line space after Reserve button
 - Link migration: case-study replacement must run first to avoid old addresses
-- Case study results: $1M+ delivery value, $1M+ extra scope, month early & 15% under budget, 8.6/10 staff satisfaction
+- Extract block code from Code editor first, then build new pages from it
 
 **Blockers**
-- WordPress API returns finished HTML only, not ACF block code—cannot rebuild Challenges/Solution/Results as editable card modules without theme code
 - Link migration runbook awaiting WordPress admin execution (back up, install Better Search Replace, dry run, execute, clear cache)
-- Slack token type does not allow message search or member lookup—cannot identify or contact Karen without external input
 - 17 of 20 audit pages not yet tested for sandbox/localhost links; migration may surface unmapped addresses
 
 **Next**
-- Send Continuing Studies case study block code (WordPress Code editor) or confirm manual duplicate & swap approach
+- Set category, topic, featured image, and meta description on draft 3101
+- Preview draft 3101 in browser and verify card layout, spacing, form behavior
 - WordPress admin: execute link migration runbook; report completion
-- Rebuild case study draft 3101 with proper card modules once block structure received
-- Session will recheck all 20 pages and test every link after migration completes
+- Recheck all 20 pages and test every link after migration completes
 
-**Checked live on 2026-11-11:** the repository
+**Checked live on 2026-11-11:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-11
 | | |
 |---|---|
@@ -88,13 +88,21 @@
 | Name | CGOE Case Study |
 | Session | `457065f1-5972-4c2f-b430-ee65e7eb64ba` |
 **In its own words (excerpt):**
-Not yet. I can only write the page content as code, and I can't see how the site's modules are put together.
+I saved draft 3101 with the same card modules as the Continuing Studies example. It's still a draft, so nothing is live. I read it back from the site afterwards: the content is now three `acf/card-simple` blocks, the theme displays them as normal card sections, and the status is still draft.
 
-**Why:** the Challenges, Solution and Results sections in the Continuing Studies example are ACF blocks from your theme. To recreate them I'd need each block's name and field names. The WordPress connection only returns the finished page HTML, not the block code underneath. The connected repository (`jax-website`) doesn't have the theme in it either; it only holds a Salesforce project skeleton. If I guessed the block names, I'd probably save blocks the editor can't open, so I wrote HTML that looks the same instead. That's also why those sections show up as Custom HTML in the editor instead of card modules.
+- **Draft:** [$1M in Delivery Value in 30 Days: AI-Accelerated Salesforce for Higher Education](https://www.jaxconsult.com/?post_type=case-study&p=3101)
+- **Challenges:** 4 cards, white background, left-aligned.
+- **Solution:** 4 cards on the black-to-blue gradient.
+- **Results:** 4 cards with the checkmark icon, centered, under the heading "RESULTS:".
+- **What didn't change:** Mission, Salesforce Products, the title and the web address. I checked again and no client names appear anywhere.
 
-**Two ways to get real modules:**
+You can now edit each card in the block editor the same way you would on the example page.
 
-1. **Send me the example's block code (recommended, about 2 minutes for you).** Open the Continuing Studies case study in the WordPress editor, click the ⋮ menu at the top right, choose **Code editor**, then copy everything and paste it here or attach it as a text file. That shows me the exact block names and fields. I'd then rebuild draft 3101 with the same card modules and our text, so you can edit each card like any other. I'd confir
+**Still to do in WordPress before you publish:**
+1. Set the Case Study category and the matching topic. Both are still empty.
+2. Add a featured image. There isn't one yet.
+3. Add a meta description in Yoast. There isn't one yet.
+4. Decide whether to reword the second Results card. It starts with "$1M+", the same as t
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
