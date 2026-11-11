@@ -42,22 +42,21 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-11
-**Status:** on track — Case study draft 3101 rebuilt with proper card modules; ready for WordPress metadata & browser testing
+**Status:** on track — Hero image & newsletter copy ready; case study draft 3101 awaits WordPress metadata, browser test & publication
 
 **Done this session**
-- Rebuilt case study draft 3101 with acf/card-simple blocks (Challenges, Solution, Results)
-- Verified card modules saved and readable from WordPress; no client names exposed
-- Documented block code extraction method for future case studies
+- Created hero image (1200×630px) with navy, gradient, $1M headline, stat pills, chart—no client names
+- Wrote newsletter copy (75 words + 35-word version) with headline, subhead, button text, alt text, tracking tags
 
 **Open items**
 - Set Case Study category and matching topic on draft 3101
-- Add featured image to draft 3101
+- Add featured image to draft 3101 (hero image ready to upload)
 - Add meta description in Yoast on draft 3101
 - Review & decide whether to reword second Results card (starts with '$1M+' like first)
 - Preview draft 3101 in browser (desktop & mobile); verify card layout, spacing, form
+- Publish draft 3101 to live (required before newsletter link works)
 - WordPress admin: back up live database, install Better Search Replace, run dry run & execute link migration
 - Recheck all 20 pages and test every link after link migration completes
-- Test live page form submission and thank-you page redirect; confirm Pardot email greeting
 
 **Decisions**
 - Completion action order: Assign prospect → Add to Salesforce Campaign → Send autoresponder → Notify user → Add tag
@@ -67,14 +66,17 @@
 - Heading sizes 28px; 'Spaces are limited.' 14px with line space after Reserve button
 - Link migration: case-study replacement must run first to avoid old addresses
 - Extract block code from Code editor first, then build new pages from it
+- Hero image uses standard sans-serif (not Jax brand font); designer can rebuild if exact match needed
 
 **Blockers**
 - Link migration runbook awaiting WordPress admin execution (back up, install Better Search Replace, dry run, execute, clear cache)
 - 17 of 20 audit pages not yet tested for sandbox/localhost links; migration may surface unmapped addresses
 
 **Next**
-- Set category, topic, featured image, and meta description on draft 3101
+- Upload hero image to draft 3101 as featured image
+- Set category, topic, and meta description on draft 3101
 - Preview draft 3101 in browser and verify card layout, spacing, form behavior
+- Publish draft 3101 to live
 - WordPress admin: execute link migration runbook; report completion
 - Recheck all 20 pages and test every link after migration completes
 
@@ -88,21 +90,22 @@
 | Name | CGOE Case Study |
 | Session | `457065f1-5972-4c2f-b430-ee65e7eb64ba` |
 **In its own words (excerpt):**
-I saved draft 3101 with the same card modules as the Continuing Studies example. It's still a draft, so nothing is live. I read it back from the site afterwards: the content is now three `acf/card-simple` blocks, the theme displays them as normal card sections, and the status is still draft.
+I made the hero image and wrote the newsletter copy. Both are attached to this session. I didn't upload or change anything in WordPress.
 
-- **Draft:** [$1M in Delivery Value in 30 Days: AI-Accelerated Salesforce for Higher Education](https://www.jaxconsult.com/?post_type=case-study&p=3101)
-- **Challenges:** 4 cards, white background, left-aligned.
-- **Solution:** 4 cards on the black-to-blue gradient.
-- **Results:** 4 cards with the checkmark icon, centered, under the heading "RESULTS:".
-- **What didn't change:** Mission, Salesforce Products, the title and the web address. I checked again and no client names appear anywhere.
+**Hero image** (1200 × 630 px)
+- It uses Jax navy with the same black-to-blue gradient as the case study's Solution section.
+- The headline is a large "$1M", with "in delivery value in 30 days" underneath.
+- Below that are three stat pills: 5,817 hours saved, 1 month early, and about 15% under budget.
+- A rising bar chart sits on the right. No client names appear.
+- The size works as the case study's featured image too, which is still on your to-do list.
 
-You can now edit each card in the block editor the same way you would on the example page.
+**Newsletter summary** (about 75 words)
+> A university's graduate and professional education center needed a large Salesforce move done on a fixed budget and timeline. They also wanted AI their staff could trust. With Education Cloud, Agentforce and Revecast Orchestrate, the team delivered more than $1M in value in 30 days. The project saved 5,817 hours, finished a month early and came in about 15% under budget. Staff rated the new Agentforce assistant 8.6 on average across 339 conversations.
 
-**Still to do in WordPress before you publish:**
-1. Set the Case Study category and the matching topic. Both are still empty.
-2. Add a featured image. There isn't one yet.
-3. Add a meta description in Yoast. There isn't one yet.
-4. Decide whether to reword the second Results card. It starts with "$1M+", the same as t
+The document also has:
+- a headline and optional subhead
+- a shorter version, about 35 words
+- the butt
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
