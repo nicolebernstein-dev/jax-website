@@ -42,21 +42,20 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-11
-**Status:** on track — Hero image & newsletter copy ready; case study draft 3101 awaits WordPress metadata, browser test & publication
+**Status:** on track — Meta description drafted; draft 3101 title & Mission updated by another editor; category, topic & Yoast paste still pending
 
 **Done this session**
-- Created hero image (1200×630px) with navy, gradient, $1M headline, stat pills, chart—no client names
-- Wrote newsletter copy (75 words + 35-word version) with headline, subhead, button text, alt text, tracking tags
+- Drafted three meta description options (149, 139, 144 characters) for draft 3101
+- Verified draft 3101 live state: title, Mission, featured image now set by another editor
 
 **Open items**
+- Paste meta description into Yoast SEO panel on draft 3101 (choose one of three options provided)
 - Set Case Study category and matching topic on draft 3101
-- Add featured image to draft 3101 (hero image ready to upload)
-- Add meta description in Yoast on draft 3101
-- Review & decide whether to reword second Results card (starts with '$1M+' like first)
 - Preview draft 3101 in browser (desktop & mobile); verify card layout, spacing, form
-- Publish draft 3101 to live (required before newsletter link works)
-- WordPress admin: back up live database, install Better Search Replace, run dry run & execute link migration
+- Publish draft 3101 to live
+- WordPress admin: execute link migration runbook (back up, install Better Search Replace, dry run, execute, clear cache)
 - Recheck all 20 pages and test every link after link migration completes
+- Review & decide whether to reword second Results card (starts with '$1M+' like first)
 
 **Decisions**
 - Completion action order: Assign prospect → Add to Salesforce Campaign → Send autoresponder → Notify user → Add tag
@@ -65,16 +64,16 @@
 - Single Pardot form handles both Registered and Waitlisted actions
 - Heading sizes 28px; 'Spaces are limited.' 14px with line space after Reserve button
 - Link migration: case-study replacement must run first to avoid old addresses
-- Extract block code from Code editor first, then build new pages from it
 - Hero image uses standard sans-serif (not Jax brand font); designer can rebuild if exact match needed
+- Focus keyphrase for Yoast: AI-accelerated Salesforce
 
 **Blockers**
-- Link migration runbook awaiting WordPress admin execution (back up, install Better Search Replace, dry run, execute, clear cache)
+- Link migration runbook awaiting WordPress admin execution
 - 17 of 20 audit pages not yet tested for sandbox/localhost links; migration may surface unmapped addresses
 
 **Next**
-- Upload hero image to draft 3101 as featured image
-- Set category, topic, and meta description on draft 3101
+- Paste chosen meta description into Yoast SEO panel on draft 3101
+- Set category and topic on draft 3101
 - Preview draft 3101 in browser and verify card layout, spacing, form behavior
 - Publish draft 3101 to live
 - WordPress admin: execute link migration runbook; report completion
@@ -90,22 +89,20 @@
 | Name | CGOE Case Study |
 | Session | `457065f1-5972-4c2f-b430-ee65e7eb64ba` |
 **In its own words (excerpt):**
-I made the hero image and wrote the newsletter copy. Both are attached to this session. I didn't upload or change anything in WordPress.
+Here's a meta description for draft 3101. It's 149 characters, which is under Yoast's limit of about 155, so search results won't cut it off:
 
-**Hero image** (1200 × 630 px)
-- It uses Jax navy with the same black-to-blue gradient as the case study's Solution section.
-- The headline is a large "$1M", with "in delivery value in 30 days" underneath.
-- Below that are three stat pills: 5,817 hours saved, 1 month early, and about 15% under budget.
-- A rising bar chart sits on the right. No client names appear.
-- The size works as the case study's featured image too, which is still on your to-do list.
+> **A university education center used AI-accelerated Salesforce delivery to gain $1M+ in value in 30 days, finishing a month early and 15% under budget.**
 
-**Newsletter summary** (about 75 words)
-> A university's graduate and professional education center needed a large Salesforce move done on a fixed budget and timeline. They also wanted AI their staff could trust. With Education Cloud, Agentforce and Revecast Orchestrate, the team delivered more than $1M in value in 30 days. The project saved 5,817 hours, finished a month early and came in about 15% under budget. Staff rated the new Agentforce assistant 8.6 on average across 339 conversations.
+Two other options, if you'd like a different angle:
+- **Leads with products (139 characters):** How AI-accelerated delivery with Education Cloud and Agentforce produced $1M+ in value in 30 days for a university, early and under budget.
+- **Leads with the headline (144 characters):** $1M in delivery value in 30 days: how a university moved to Education Cloud, added an Agentforce assistant, and finished early and under budget.
 
-The document also has:
-- a headline and optional subhead
-- a shorter version, about 35 words
-- the butt
+**Suggested focus keyphrase:** AI-accelerated Salesforce
+
+**You'll need to paste it into Yoast yourself.** I don't have a way to set it. The draft's Yoast fields aren't available through the WordPress connection. To add it, open draft 3101, go to the Yoast SEO panel, and paste it into the Meta description field.
+
+**The draft has changed since I last saved it.** I just checked the live draft, and someone has edited it:
+- The title is now "$1M in Delivery Value in 30 
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
