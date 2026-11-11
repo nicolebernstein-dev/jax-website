@@ -42,20 +42,21 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-11
-**Status:** at risk — Page updates live & verified. Link migration runbook ready for WordPress admin. Karen notification still blocked.
+**Status:** at risk — Case study draft created & saved. Link migration runbook awaiting WordPress admin execution. Karen notification still blocked.
 
 **Done this session**
-- Validated search-and-replace strategy on 3 live pages; tested 16 rewritten URLs—all load correctly
-- Created WordPress admin runbook with dry-run steps, undo plan, and CLI alternative
+- Created draft case study (entry 3101) on live WordPress from 5 slides; saved and verified as draft
+- Structured case study with Mission, Challenges, Solution, Results matching Continuing Studies layout
 
 **Open items**
-- WordPress admin executes link migration (3 replacements in order, dry run first, cache clear, spot-check)
+- WordPress admin: back up live database, install Better Search Replace, run dry run of 3 replacements in order
+- WordPress admin: execute replacements, clear caches, spot-check for pantheonsite and localhost in page source
 - Recheck all 20 pages and test every link after migration completes
 - Test live page in browser on computer and phone; verify form position, heading sizes, spacing
 - Submit test registration and confirm thank-you page redirect works
 - Confirm Pardot email greeting wording matches 'Hi,' or report actual text
 - Remove 2 test leads from Salesforce campaign
-- Send Karen notification—requires her Slack member ID, alternative channel, or manual copy-paste
+- Case study: set Category (Case Study), Topic (Higher Education), Featured image, Meta description; review Results wording for repetition; optionally rebuild Challenges/Solution/Results with card blocks
 
 **Decisions**
 - Completion action order: Assign prospect → Add to Salesforce Campaign → Send autoresponder → Notify user → Add tag
@@ -64,16 +65,17 @@
 - Single Pardot form handles both Registered and Waitlisted actions
 - Heading sizes 28px; 'Spaces are limited.' 14px with line space after Reserve button
 - Link migration: case-study replacement must run first to avoid old addresses
+- Case study results: $1M+ delivery value, $1M+ extra scope, month early & 15% under budget, 8.6/10 staff satisfaction
 
 **Blockers**
 - Slack token type does not allow message search or member lookup—cannot identify or contact Karen without external input
 - 17 of 20 audit pages not yet tested for sandbox/localhost links; migration may surface unmapped addresses
 
 **Next**
-- WordPress admin: back up live database, install Better Search Replace, run dry run of 3 replacements in order
-- WordPress admin: execute replacements, clear caches, spot-check for pantheonsite and localhost in page source
+- WordPress admin: execute link migration runbook (back up, install Better Search Replace, dry run, execute, clear cache, spot-check)
 - WordPress admin: report completion; session will recheck all 20 pages and test every link
-- Provide Karen's Slack member ID, alternative contact channel, or send draft message yourself
+- Case study editor: set Category, Topic, Featured image, Meta description; review Results wording
+- Provide Karen's Slack member ID, alternative contact channel, or send draft notification yourself
 
 **Checked live on 2026-11-11:** nothing — the status above is as recorded, not re-checked
 ### Last session — 2026-11-11
@@ -82,22 +84,21 @@
 | Type | BUILD |
 | Outcome | COMPLETED |
 | Branch | `main` |
-| Name | Jax Site Updates |
-| Session | `6f0571c3-0a1e-497d-bea1-497f5e8f0665` |
+| Name | CGOE Case Study |
+| Session | `457065f1-5972-4c2f-b430-ee65e7eb64ba` |
 **In its own words (excerpt):**
-A search-and-replace will work even though the links are unique. The replace only swaps the wrong start of each link and keeps the rest exactly as it was. For example, `live-jax-consult.pantheonsite.io/services/data-ai/` becomes `www.jaxconsult.com/services/data-ai/`.
+I created the case study as a draft on www.jaxconsult.com. It is not live. I read it back afterwards and confirmed it saved as a draft.
 
-I tested this today on Home, Industries > Nonprofit and Industries > Public Sector. I pulled 19 unique sandbox and localhost links from those pages, swapped the start, and got 16 distinct live addresses. All 16 load a working page on www.jaxconsult.com, including service pages, case studies (moved to /insights/) and images.
+- **Draft:** [$1M in Delivery Value in 30 Days: AI-Accelerated Salesforce for Higher Education](https://www.jaxconsult.com/?post_type=case-study&p=3101) (Case Studies, entry 3101)
+- **Planned address:** /insights/ai-accelerated-salesforce-higher-education/
 
-**Steps for your WordPress admin:**
-1. **Back up the live database** in Pantheon: Live → Backups → Create New Backup.
-2. **Install Better Search Replace** (Plugins → Add New), then open it from Tools → Better Search Replace.
-3. **Do a dry run of three replacements, in this order,** with all tables selected:
-   - `live-jax-consult.pantheonsite.io/case-study/` → `www.jaxconsult.com/insights/`
-   - `live-jax-consult.pantheonsite.io` → `www.jaxconsult.com`
-   - `http://localhost/jax-consulting` → `https://www.jaxconsult.com`
-4. **Check the counts** from the dry run look sensible.
-5. **Run all three f
+**One thing to know first:** the text I wrote for the preview last turn wasn't kept when this session resumed. I rewrote it from your five slides in the same structure. Please read it through rather than assuming it matches the preview word for word.
+
+**What's in it.** It follows the same layout as the Continuing Studies case study:
+- **Mission:** a university's graduate and professional education center. Stanford, CGOE and the other customers on the slides are not named.
+- **Salesforce Products:** Education Cloud, Agentforce, Data360, Salesforce Knowledge and Revecast Orchestrate.
+- **Challenges (4 cards):** the large migration scope, staff answering the same questions over and over, AI that staff have to be able to trust, and a fixed budget and timeline.
+- **Solution (4 cards, blue band):** s
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
