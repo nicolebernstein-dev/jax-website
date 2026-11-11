@@ -42,21 +42,20 @@
 <!-- Written by Orchestrate at the end of each session. Edits inside this block are
      replaced next session; anything OUTSIDE it is yours and is never touched. -->
 ### Engagement state — 2026-11-11
-**Status:** at risk — Case study draft created & saved. Link migration runbook awaiting WordPress admin execution. Karen notification still blocked.
+**Status:** at risk — Case study draft saved; link migration & module rebuild blocked on WordPress admin & theme code
 
 **Done this session**
-- Created draft case study (entry 3101) on live WordPress from 5 slides; saved and verified as draft
-- Structured case study with Mission, Challenges, Solution, Results matching Continuing Studies layout
+- Identified blocker: ACF block structure not accessible via API; HTML fallback created instead
 
 **Open items**
-- WordPress admin: back up live database, install Better Search Replace, run dry run of 3 replacements in order
-- WordPress admin: execute replacements, clear caches, spot-check for pantheonsite and localhost in page source
-- Recheck all 20 pages and test every link after migration completes
-- Test live page in browser on computer and phone; verify form position, heading sizes, spacing
-- Submit test registration and confirm thank-you page redirect works
-- Confirm Pardot email greeting wording matches 'Hi,' or report actual text
-- Remove 2 test leads from Salesforce campaign
-- Case study: set Category (Case Study), Topic (Higher Education), Featured image, Meta description; review Results wording for repetition; optionally rebuild Challenges/Solution/Results with card blocks
+- WordPress admin: back up live database, install Better Search Replace, run dry run & execute link migration
+- Obtain Continuing Studies case study block code (Code editor → copy all) or duplicate & swap text manually
+- Rebuild case study draft 3101 with proper card modules (Challenges, Solution, Results) once block structure known
+- Set Category, Topic, Featured image, Meta description on case study
+- Recheck all 20 pages and test every link after link migration completes
+- Test live page in browser (desktop & mobile); verify form, heading sizes, spacing
+- Submit test registration and confirm thank-you page redirect
+- Confirm Pardot email greeting wording; remove 2 test leads from Salesforce campaign
 
 **Decisions**
 - Completion action order: Assign prospect → Add to Salesforce Campaign → Send autoresponder → Notify user → Add tag
@@ -68,16 +67,18 @@
 - Case study results: $1M+ delivery value, $1M+ extra scope, month early & 15% under budget, 8.6/10 staff satisfaction
 
 **Blockers**
+- WordPress API returns finished HTML only, not ACF block code—cannot rebuild Challenges/Solution/Results as editable card modules without theme code
+- Link migration runbook awaiting WordPress admin execution (back up, install Better Search Replace, dry run, execute, clear cache)
 - Slack token type does not allow message search or member lookup—cannot identify or contact Karen without external input
 - 17 of 20 audit pages not yet tested for sandbox/localhost links; migration may surface unmapped addresses
 
 **Next**
-- WordPress admin: execute link migration runbook (back up, install Better Search Replace, dry run, execute, clear cache, spot-check)
-- WordPress admin: report completion; session will recheck all 20 pages and test every link
-- Case study editor: set Category, Topic, Featured image, Meta description; review Results wording
-- Provide Karen's Slack member ID, alternative contact channel, or send draft notification yourself
+- Send Continuing Studies case study block code (WordPress Code editor) or confirm manual duplicate & swap approach
+- WordPress admin: execute link migration runbook; report completion
+- Rebuild case study draft 3101 with proper card modules once block structure received
+- Session will recheck all 20 pages and test every link after migration completes
 
-**Checked live on 2026-11-11:** nothing — the status above is as recorded, not re-checked
+**Checked live on 2026-11-11:** the repository
 ### Last session — 2026-11-11
 | | |
 |---|---|
@@ -87,18 +88,13 @@
 | Name | CGOE Case Study |
 | Session | `457065f1-5972-4c2f-b430-ee65e7eb64ba` |
 **In its own words (excerpt):**
-I created the case study as a draft on www.jaxconsult.com. It is not live. I read it back afterwards and confirmed it saved as a draft.
+Not yet. I can only write the page content as code, and I can't see how the site's modules are put together.
 
-- **Draft:** [$1M in Delivery Value in 30 Days: AI-Accelerated Salesforce for Higher Education](https://www.jaxconsult.com/?post_type=case-study&p=3101) (Case Studies, entry 3101)
-- **Planned address:** /insights/ai-accelerated-salesforce-higher-education/
+**Why:** the Challenges, Solution and Results sections in the Continuing Studies example are ACF blocks from your theme. To recreate them I'd need each block's name and field names. The WordPress connection only returns the finished page HTML, not the block code underneath. The connected repository (`jax-website`) doesn't have the theme in it either; it only holds a Salesforce project skeleton. If I guessed the block names, I'd probably save blocks the editor can't open, so I wrote HTML that looks the same instead. That's also why those sections show up as Custom HTML in the editor instead of card modules.
 
-**One thing to know first:** the text I wrote for the preview last turn wasn't kept when this session resumed. I rewrote it from your five slides in the same structure. Please read it through rather than assuming it matches the preview word for word.
+**Two ways to get real modules:**
 
-**What's in it.** It follows the same layout as the Continuing Studies case study:
-- **Mission:** a university's graduate and professional education center. Stanford, CGOE and the other customers on the slides are not named.
-- **Salesforce Products:** Education Cloud, Agentforce, Data360, Salesforce Knowledge and Revecast Orchestrate.
-- **Challenges (4 cards):** the large migration scope, staff answering the same questions over and over, AI that staff have to be able to trust, and a fixed budget and timeline.
-- **Solution (4 cards, blue band):** s
+1. **Send me the example's block code (recommended, about 2 minutes for you).** Open the Continuing Studies case study in the WordPress editor, click the ⋮ menu at the top right, choose **Code editor**, then copy everything and paste it here or attach it as a text file. That shows me the exact block names and fields. I'd then rebuild draft 3101 with the same card modules and our text, so you can edit each card like any other. I'd confir
 
 _[summary truncated — see the session record for the full text]_
 <!-- orchestrate:session-state:end -->
